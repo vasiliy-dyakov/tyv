@@ -82,10 +82,6 @@ module.exports = {
             },
             includes: [
                 'static/**/*.js'
-            ],
-            excludes: [
-                'node_modules/**/*.js',
-                'static/libs/**/*.js'
             ]
         }
     }
