@@ -10,9 +10,17 @@
 <body>
     <div class="container">
         <div class="page-header">
-            <h1>Узнай свой словарный запас русского языка</h1>
+            <h1>Протестируй свой словарный запас<br>
+                <small>Сколько слов русского языка ты знаешь?</small></h1>
         </div>
-        <input type="text" class="form-control" placeholder="Отфильтроовать слова" ng-model="filterWords">
+        <div class="callout callout-primery">
+            <p>Укажи те слова, у которых знаешь хотя бы одно значение. Не указывай слова, которые встречал, но в значении сомневаешься.</p>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Шаг 1</a></li>
+            <li class="disabled"><a href="#">Шаг 2</a></li>
+            <li class="disabled"><a href="#">Результат</a></li>
+        </ul>
         <div ng-init="words=['вода', 'рис', 'музыка', 'спорт', 'задача', 'собака', 'покер', 'планировщик', 'победа', 'автомобиль', 'жечь', 'летать', 'мыть', 'слыть', 'шашка', 'такса', 'маржа', 'филигранный', 'зомби', 'карусель']">
             <ul class="list-unstyled" >
                 <li ng-repeat="word in words | filter:filterWords">
