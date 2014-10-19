@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="TYV">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Протестируй словарный запас</title>
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="common.css">
@@ -16,14 +16,12 @@
         <div class="callout callout-primery">
             <p>Укажи те слова, у которых знаешь хотя бы одно значение. Не указывай слова, которые встречал, но в значении сомневаешься.</p>
         </div>
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#">Шаг 1</a></li>
-            <li class="disabled"><a href="#">Шаг 2</a></li>
-            <li class="disabled"><a href="#">Результат</a></li>
-        </ul>
-        <div ng-init="words=['вода', 'рис', 'музыка', 'спорт', 'задача', 'собака', 'покер', 'планировщик', 'победа', 'автомобиль', 'жечь', 'летать', 'мыть', 'слыть', 'шашка', 'такса', 'маржа', 'филигранный', 'зомби', 'карусель']">
-            <ul class="list-unstyled" >
-                <li ng-repeat="word in words | filter:filterWords">
+        <div ng-controller="StepsController">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Шаг 1 из 3</a></li>
+            </ul>
+            <ul class="list-unstyled">
+                <li ng-repeat="word in words">
                     <div class="checkbox">
                         <label>
                             <input type="checkbox"> {{ word }}
@@ -31,12 +29,15 @@
                     </div>
                 </li>
             </ul>
+            <p>Всего слов: {{ words.length }}</p>
+            <p><button type="button" class="btn btn-primary">Далее</button></p>
         </div>
     </div>
 
     <script src="libs/jquery/dist/jquery.js"></script>
     <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
     <script src="libs/angular/angular.js"></script>
+    <script src="controllers.js"></script>
 
 </body>
 </html>
