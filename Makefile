@@ -1,27 +1,39 @@
-NPM_BIN = node_modules/.bin
+NPM_ROOT = node_modules
+NPM_BIN = $(NPM_ROOT)/.bin
 LIBS = static/libs
 
 .PHONY: all
-all: $(NPM_BIN) $(LIBS)
+all: $(NPM_ROOT) $(LIBS)
 
-$(NPM_BIN):
+$(NPM_ROOT):
 	@npm install
 
-$(LIBS): $(NPM_BIN)
+$(LIBS): $(NPM_ROOT)
 	@$(NPM_BIN)/bower install
 
 .PHONY: server
-server: $(NPM_BIN)
+server: $(NPM_ROOT)
 	@node tools/server.js
 
 .PHONY: lint
-lint: $(NPM_BIN)
+lint: $(NPM_ROOT)
 	@$(NPM_BIN)/jshint-groups
 	@$(NPM_BIN)/jscs .
 
 .PHONY: test
-test: $(NPM_BIN)
-	@$(NPM_BIN)/../karma/bin/karma start test/karma.conf.js
+test: test-client test-e2e
+
+.PHONY: test-client
+test-client: $(NPM_ROOT)
+	@$(NPM_ROOT)/karma/bin/karma start test/karma.conf.js
+
+.PHONY: test-e2e
+WEB_DRIVER = $(NPM_ROOT)/protractor/selenium
+test-e2e: $(WEB_DRIVER)
+	@$(NPM_BIN)/protractor test/protractor.conf.js
+
+$(WEB_DRIVER): $(NPM_ROOT)
+	$(NPM_BIN)/webdriver-manager update
 
 .PHONY: clean
 clean:

@@ -17,11 +17,12 @@
             <p>Укажи те слова, у которых знаешь хотя бы одно значение. Не указывай слова, которые встречал, но в значении сомневаешься.</p>
         </div>
         <div ng-controller="StepsController">
+            <p><input type="text" placeholder="Фильтровать слова" class="form-control" ng-model="query"></p>
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#">Шаг 1 из 3</a></li>
             </ul>
             <ul class="list-unstyled">
-                <li ng-repeat="word in words">
+                <li ng-repeat="word in words | filter: query">
                     <div class="checkbox">
                         <label>
                             <input type="checkbox"> {{ word }}
@@ -37,7 +38,7 @@
     <script src="libs/jquery/dist/jquery.js"></script>
     <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
     <script src="libs/angular/angular.js"></script>
-    <script src="controllers.js"></script>
+    <script src="js/controllers.js"></script>
 
 </body>
 </html>
