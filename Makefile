@@ -20,7 +20,8 @@ lint: $(NPM_BIN)
 	@$(NPM_BIN)/jscs .
 
 .PHONY: test
-	@$(NPM_BIN)/casperjs tests
+test: $(NPM_BIN)
+	@$(NPM_BIN)/../karma/bin/karma start test/karma.conf.js
 
 .PHONY: clean
 clean:
