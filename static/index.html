@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="TYV">
+<html lang="en" data-ng-app="TYV">
 <head>
     <meta charset="utf-8">
     <title>Протестируй словарный запас</title>
@@ -9,20 +9,33 @@
 </head>
 <body>
     <div class="container">
+        <ng-include src="'header'"></ng-include>
+        <ng-view></ng-view>
+    </div>
+
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="libs/lodash/dist/lodash.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+    <script src="js/controllers.js"></script>
+
+    <script type="text/ng-template" id="header">
         <div class="page-header">
             <h1>Протестируй свой словарный запас<br>
                 <small>Сколько слов русского языка ты знаешь?</small></h1>
         </div>
+    </script>
+    <script type="text/ng-template" id="steps">
         <div class="callout callout-primery">
             <p>Укажи те слова, у которых знаешь хотя бы одно значение. Не указывай слова, которые встречал, но в значении сомневаешься.</p>
         </div>
-        <div ng-controller="StepsController">
-            <p><input type="text" placeholder="Фильтровать слова" class="form-control" ng-model="query"></p>
+        <div data-ng-controller="StepsController">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#">Шаг 1 из 3</a></li>
+                <li class="active"><a href="#">Шаг {{ step }} из {{ stepsCount }}</a></li>
             </ul>
             <ul class="list-unstyled">
-                <li ng-repeat="word in words | filter: query">
+                <li data-ng-repeat="word in words">
                     <div class="checkbox">
                         <label>
                             <input type="checkbox"> {{ word }}
@@ -30,16 +43,8 @@
                     </div>
                 </li>
             </ul>
-            <p>Всего слов: {{ words.length }}</p>
-            <p><button type="button" class="btn btn-primary">Далее</button></p>
+            <p><a href="#/step/{{ nextStep }}" data-ng-show="nextStep" class="btn btn-primary">Далее</a></p>
         </div>
-    </div>
-
-    <script src="libs/jquery/dist/jquery.js"></script>
-    <script src="libs/lodash/dist/lodash.js"></script>
-    <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="libs/angular/angular.js"></script>
-    <script src="js/controllers.js"></script>
-
+    </script>
 </body>
 </html>
