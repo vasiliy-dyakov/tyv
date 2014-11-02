@@ -5,7 +5,8 @@ var TYV = angular.module('TYV', ['ngRoute']);
 TYV.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/step/:stepNum', {
-            templateUrl: 'stepsView'
+            templateUrl: 'stepsView',
+            controller: 'StepsController as controller'
         })
         .when('/result/:resultId', {
             templateUrl: 'resultView',
