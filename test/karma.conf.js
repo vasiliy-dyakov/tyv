@@ -7,6 +7,7 @@ module.exports = function(config){
       'static/libs/angular/angular.js',
       'static/libs/angular-route/angular-route.js',
       'static/libs/angular-mocks/angular-mocks.js',
+      'static/js/app.js',
       'static/js/**/*.js',
       'test/unit/**/*.js'
     ],

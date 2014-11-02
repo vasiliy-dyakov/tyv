@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <ng-include src="'header'"></ng-include>
+        <ng-include src="'headerView'"></ng-include>
         <ng-view></ng-view>
     </div>
 
@@ -18,19 +18,23 @@
     <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
     <script src="libs/angular/angular.js"></script>
     <script src="libs/angular-route/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/StepsController.js"></script>
     <script src="js/controllers.js"></script>
 
-    <script type="text/ng-template" id="header">
+    <script type="text/ng-template" id="headerView">
         <div class="page-header">
             <h1>Протестируй свой словарный запас<br>
                 <small>Сколько слов русского языка ты знаешь?</small></h1>
         </div>
     </script>
-    <script type="text/ng-template" id="steps">
-        <div class="callout callout-primery">
-            <p>Укажи те слова, у которых знаешь хотя бы одно значение. Не указывай слова, которые встречал, но в значении сомневаешься.</p>
-        </div>
-        <div data-ng-controller="StepsController">
+
+    <script type="text/ng-template" id="stepsView">
+        <div data-ng-controller="StepsController as controller">
+            <div class="callout callout-primery">
+                <p>Укажи те слова, у которых знаешь хотя бы одно значение.
+                Не указывай слова, которые встречал, но в значении сомневаешься.</p>
+            </div>
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#">Шаг {{ step }} из {{ stepsCount }}</a></li>
             </ul>
@@ -43,8 +47,15 @@
                     </div>
                 </li>
             </ul>
-            <p><a href="#/step/{{ nextStep }}" data-ng-show="nextStep" class="btn btn-primary">Далее</a></p>
+            <p>
+                <a href="#/step/{{ nextStep }}" data-ng-show="nextStep" class="btn btn-primary">Далее</a>
+                <a data-ng-click="controller.knowResult()" data-ng-show="!nextStep" class="btn btn-primary">Узнать результат</a>
+            </p>
         </div>
+    </script>
+
+    <script type="text/ng-template" id="resultView">
+        <p>Вы знаете {{ knownWords }} русских слов</p>
     </script>
 </body>
 </html>
