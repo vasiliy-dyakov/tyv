@@ -1,4 +1,5 @@
-var fs = require('fs');
+var fs = require('fs'),
+    prompt = require('sync-prompt').prompt;
 
 wordsProvider = {
 
@@ -9,7 +10,7 @@ wordsProvider = {
         this.lemma = this.getDictionary();
 
         this.saveStep1();
-        this.saveStep2();
+        // this.saveStep2();
 
     },
 
@@ -39,7 +40,7 @@ wordsProvider = {
                 index = this.random(bundleSize * bundleNum, bundleSize * (bundleNum + 1));
                 newWord = this.lemma[index];
 
-                if (words.indexOf(newWord) === -1  && this.ENABLED_TYPES.indexOf(newWord.type !== -1)) {
+                if (words.indexOf(newWord) === -1  && this.ENABLED_TYPES.indexOf(newWord.type !== -1) && prompt(newWord.value + '[y/n]') === 'y') {
                     words.push(newWord.value);
                 }
 

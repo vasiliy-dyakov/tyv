@@ -2,17 +2,15 @@
 
     'use strict';
 
-    var StepsController = function($scope, $routeParams, $location) {
+    var StepsController = function($scope, $http, $routeParams, $location) {
 
         $scope.stepsCount = 2;
         $scope.step = +$routeParams.stepNum;
         $scope.nextStep = $scope.step < $scope.stepsCount ? $scope.step + 1 : false;
 
-        $scope.words = ['вода', 'рис', 'музыка', 'спорт', 'задача',
-            'собака', 'покер', 'планировщик', 'победа', 'автомобиль',
-            'жечь', 'летать', 'мыть', 'слыть', 'шашка',
-            'такса', 'маржа', 'филигранный', 'зомби', 'карусель'
-        ];
+        $http.get('/data/words1.json').success(function(data) {
+            $scope.words = data;
+        });
 
         this.$location = $location;
 
@@ -28,6 +26,6 @@
 
     };
 
-    app.controller('StepsController', ['$scope', '$routeParams', '$location', StepsController]);
+    app.controller('StepsController', ['$scope', '$http', '$routeParams', '$location', StepsController]);
 
 })(TYV);
