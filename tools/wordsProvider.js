@@ -1,16 +1,19 @@
 var fs = require('fs'),
-    prompt = require('sync-prompt').prompt;
+    prompt = require('sync-prompt').prompt,
+    _ = require('lodash');
 
 wordsProvider = {
 
     init: function() {
-
         this.setConstants();
+    },
+
+    generateWords: function() {
 
         this.lemma = this.getDictionary();
 
         this.saveStep1();
-        this.saveStep2();
+        // this.saveStep2();
 
     },
 
@@ -19,6 +22,8 @@ wordsProvider = {
         this.ROOT_PATH = './';
         this.CVS_FILE = this.ROOT_PATH + 'data/lemma.num';
         this.JSON_FILE = this.ROOT_PATH + 'data/lemma.json';
+        this.CVS_FILE2 = this.ROOT_PATH + 'data/lemma2.num';
+        this.JSON_FILE2 = this.ROOT_PATH + 'data/lemma2.json';
         this.DATA_PATH = this.ROOT_PATH + 'static/data/';
         this.STEP1_JSON = this.DATA_PATH + 'words1.json';
         this.STEP2_JSON = this.DATA_PATH + 'words2.json';
@@ -40,7 +45,9 @@ wordsProvider = {
                 index = this.random(bundleSize * bundleNum, bundleSize * (bundleNum + 1));
                 newWord = this.lemma[index];
 
-                if (words.indexOf(newWord) === -1  && this.ENABLED_TYPES.indexOf(newWord.type !== -1) && prompt(newWord.value + '[y/n]') === 'y') {
+                if (words.indexOf(newWord) === -1  && this.ENABLED_TYPES.indexOf(newWord.type) !== -1
+                        && prompt(newWord.value + '[y/n]') === 'y'
+                ) {
                     words.push(newWord.value);
                 }
 
@@ -53,8 +60,8 @@ wordsProvider = {
 
     saveStep1: function() {
 
-        // из каждого десятка тысяч выбрать по 20 случайных слов
-        var words = this.getWords(20, 10000, 0, 3);
+        // из каждой тысячи выбрать по 1 случайному слову
+        var words = this.getWords(1, 1000, 0, 39);
 
         fs.writeFileSync(this.STEP1_JSON, JSON.stringify(words, null, 4));
 
@@ -62,11 +69,11 @@ wordsProvider = {
 
     saveStep2: function() {
 
-        // сформировать для каждых 5 тысяч уточняющий набор из 60 случайных слов
+        // сформировать для каждых 5 тысяч уточняющий набор из 40 случайных слов
         var words = {};
 
-        for (var index = 0; index < 6; index++) {
-            words[index * 5000] = this.getWords(60, 5000, index, index + 1);
+        for (var index = 0; index < 9; index++) {
+            words[index * 5000] = this.getWords(40, 5000, index, index + 1);
         }
 
         fs.writeFileSync(this.STEP2_JSON, JSON.stringify(words, null, 4));
@@ -74,7 +81,7 @@ wordsProvider = {
     },
 
     getDictionary: function() {
-        return JSON.parse(fs.readFileSync(this.JSON_FILE));
+        return JSON.parse(fs.readFileSync(this.JSON_FILE2));
     },
 
     random: function(min, max) {
@@ -88,12 +95,14 @@ wordsProvider = {
             }).replace(/(\r\n|\r)/gm,'\n'),
 
             rows = cvs.split('\n'),
-            json = {};
+            json = {},
+            index = 0;
 
-        rows.forEach(function(row, index) {
-            if (!row) return;
+        rows.forEach(function(row) {
 
             var array = row.split(' ');
+
+            if (!row || this.ENABLED_TYPES.indexOf(array[3]) === -1) return;
 
             json[index] = {
                 value: array[2],
@@ -101,12 +110,71 @@ wordsProvider = {
                 type: array[3]
             };
 
-        });
+            index++;
+
+        }.bind(this));
 
         fs.writeFileSync(this.JSON_FILE, JSON.stringify(json, null, 4));
+
+    },
+
+    convertCVS2JSON2: function() {
+
+        var cvs = fs.readFileSync(this.CVS_FILE2, {
+                encoding: 'utf-8'
+            }).replace(/(\r\n|\r)/gm,'\n'),
+
+            rows = cvs.split('\n').slice(1),
+            json = {},
+            index = 0,
+            types = {
+                s: 'noun',
+                a: 'adj',
+                v: 'verb',
+                adv: 'adv'
+            };
+
+        rows = _.sortBy(rows, function(row) {
+            return -row.split('\t')[2];
+        });
+
+        rows.forEach(function(row) {
+
+            var array = row.split('\t'),
+                type = types[array[1]] || array[1];
+
+            if (!row || this.ENABLED_TYPES.indexOf(type) === -1) return;
+
+            json[index] = {
+                value: array[0],
+                ipm: +array[2],
+                type: type,
+                r: +array[3],
+                d: +array[4],
+                doc: +array[5]
+            };
+
+            index++;
+
+        }.bind(this));
+
+        fs.writeFileSync(this.JSON_FILE2, JSON.stringify(json, null, 4));
 
     }
 
 };
 
+var args = process.argv.slice(2)[0];
+
 wordsProvider.init();
+if (!args) {
+    wordsProvider.generateWords();
+} else {
+    if (args == 1) {
+        wordsProvider.convertCVS2JSON();
+    } else if (args == 2) {
+        wordsProvider.convertCVS2JSON2();
+    } else {
+        console.log('Задание не ясно! Ничего не сделано.');
+    }
+}

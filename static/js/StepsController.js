@@ -4,9 +4,18 @@
 
     var StepsController = function($scope, $http, $routeParams, $location, storage) {
 
+        this.$scope = $scope;
+        this.$location = $location;
+        this.storage = storage;
+
+
         $scope.stepsCount = 2;
         $scope.step = +$routeParams.stepNum;
         $scope.nextStep = $scope.step < $scope.stepsCount ? $scope.step + 1 : false;
+
+        if ($scope.step > 1 && typeof storage.get('currentResult') === 'undefined') {
+            this.redirect('/');
+        }
 
         if ($scope.step === 1) {
             $http.get('/data/words1.json').success(function(data) {
@@ -28,10 +37,6 @@
             });
         }
 
-        this.$scope = $scope;
-        this.$location = $location;
-        this.storage = storage;
-
     };
 
     StepsController.prototype = {
@@ -43,7 +48,7 @@
 
             if (this.$scope.step === 1) {
 
-                currentResult = Math.floor(30000 * checkedCount / this.$scope.words.length);
+                currentResult = Math.floor(40000 * checkedCount / this.$scope.words.length);
                 // округляем до нижних 5000
                 currentResult = Math.round(Math.floor(currentResult / 5000) * 5000);
                 this.storage.set('currentResult', currentResult);
@@ -56,11 +61,11 @@
 
             }
 
-            this.redirect();
+            this.redirect(this.$scope.nextStep ? '/step/' + this.$scope.nextStep : '/result');
         },
 
-        redirect: function() {
-            this.$location.path(this.$scope.nextStep ? '/step/' + this.$scope.nextStep : '/result');
+        redirect: function(path) {
+            this.$location.path(path);
         }
 
     };
