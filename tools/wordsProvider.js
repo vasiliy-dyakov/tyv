@@ -10,7 +10,7 @@ wordsProvider = {
         this.lemma = this.getDictionary();
 
         this.saveStep1();
-        // this.saveStep2();
+        this.saveStep2();
 
     },
 
