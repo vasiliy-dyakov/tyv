@@ -13,7 +13,7 @@ wordsProvider = {
         this.lemma = this.getDictionary();
 
         this.saveStep1();
-        // this.saveStep2();
+        this.saveStep2();
 
     },
 
@@ -46,7 +46,7 @@ wordsProvider = {
                 newWord = this.lemma[index];
 
                 if (words.indexOf(newWord) === -1  && this.ENABLED_TYPES.indexOf(newWord.type) !== -1
-                        && prompt(newWord.value + '[y/n]') === 'y'
+                        // && prompt(newWord.value + '[y/n]') === 'y'
                 ) {
                     words.push(newWord.value);
                 }
@@ -61,7 +61,7 @@ wordsProvider = {
     saveStep1: function() {
 
         // из каждой тысячи выбрать по 1 случайному слову
-        var words = this.getWords(1, 1000, 0, 39);
+        var words = this.getWords(1, 1000, 0, 40);
 
         fs.writeFileSync(this.STEP1_JSON, JSON.stringify(words, null, 4));
 

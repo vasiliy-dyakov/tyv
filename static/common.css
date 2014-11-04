@@ -3,3 +3,27 @@
     padding: 0 20px;
     margin: 0 auto;
 }
+
+.words {
+    margin: 10px 0;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+@media screen and (min-width: 1000px) {
+    .words {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
+
+.word {
+    padding: 5px 0;
+}
+
+.word .checkbox {
+    margin-top: 0;
+    margin-bottom: 0;
+}

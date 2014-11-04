@@ -38,8 +38,8 @@
         <ul class="nav nav-tabs">
             <li class="active"><a href="#">Шаг {{ step }} из {{ stepsCount }}</a></li>
         </ul>
-        <ul class="list-unstyled">
-            <li data-ng-repeat="word in words">
+        <ul class="list-unstyled words">
+            <li class="word" data-ng-repeat="word in words">
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" data-ng-model="word.checked">{{ word.value }}
