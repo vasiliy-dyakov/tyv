@@ -21,6 +21,7 @@
     <script src="js/app.js"></script>
     <script src="js/StepsController.js"></script>
     <script src="js/ResultController.js"></script>
+    <script src="js/storage.js"></script>
 
     <script type="text/ng-template" id="headerView">
         <div class="page-header">
@@ -41,19 +42,22 @@
             <li data-ng-repeat="word in words">
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox"> {{ word }}
+                        <input type="checkbox" data-ng-model="word.checked">{{ word.value }}
                     </label>
                 </div>
             </li>
         </ul>
         <p>
-            <a href="#/step/{{ nextStep }}" data-ng-show="nextStep" class="btn btn-primary">Далее</a>
-            <a data-ng-click="controller.knowResult()" data-ng-show="!nextStep" class="btn btn-primary">Узнать результат</a>
+            <a data-ng-click="controller.calcStep()" class="btn btn-primary">
+                <span data-ng-show="nextStep">Далее</span>
+                <span data-ng-show="!nextStep">Узнать результат</span>
+            </a>
         </p>
     </script>
 
     <script type="text/ng-template" id="resultView">
-        <p>Вы знаете {{ knownWords }} русских слов</p>
+        <p data-ng-show="knownWords">Твой результат: {{ knownWords }} русских слов</p>
+        <p data-ng-show="!knownWords">Чтобы узнать свой словарный запас пройди тест.</p>
         <p><a href="#/">Перейти на главную страницу</a></p>
     </script>
 </body>

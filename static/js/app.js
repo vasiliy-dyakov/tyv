@@ -8,7 +8,7 @@ TYV.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'stepsView',
             controller: 'StepsController as controller'
         })
-        .when('/result/:resultId', {
+        .when('/result/', {
             templateUrl: 'resultView',
             controller: 'ResultController'
         })
@@ -17,4 +17,3 @@ TYV.config(['$routeProvider', function($routeProvider) {
         });
     }
 ]);
-

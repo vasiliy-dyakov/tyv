@@ -2,8 +2,13 @@
 
     'use strict';
 
-    app.controller('ResultController', ['$scope', '$routeParams', function($scope, $routeParams) {
-        $scope.knownWords = 15400;
-    }]);
+    app.controller('ResultController', [
+        '$scope',
+        '$routeParams',
+        'storage',
+        function($scope, $routeParams, storage) {
+            $scope.knownWords = storage.get('knownWords');
+        }
+    ]);
 
 })(TYV);
