@@ -45,7 +45,7 @@ wordsProvider = {
                 index = this.random(bundleSize * bundleNum, bundleSize * (bundleNum + 1));
                 newWord = this.lemma[index];
 
-                if (words.indexOf(newWord) === -1  && this.ENABLED_TYPES.indexOf(newWord.type) !== -1
+                if (newWord && words.indexOf(newWord) === -1  && this.ENABLED_TYPES.indexOf(newWord.type) !== -1
                         // && prompt(newWord.value + '[y/n]') === 'y'
                 ) {
                     words.push(newWord.value);
@@ -61,7 +61,7 @@ wordsProvider = {
     saveStep1: function() {
 
         // из каждой тысячи выбрать по 1 случайному слову
-        var words = this.getWords(1, 1000, 0, 40);
+        var words = this.getWords(1, 1000, 0, 48);
 
         fs.writeFileSync(this.STEP1_JSON, JSON.stringify(words, null, 4));
 
@@ -72,7 +72,7 @@ wordsProvider = {
         // сформировать для каждых 5 тысяч уточняющий набор из 40 случайных слов
         var words = {};
 
-        for (var index = 0; index < 9; index++) {
+        for (var index = 0; index < 10; index++) {
             words[index * 5000] = this.getWords(40, 5000, index, index + 1);
         }
 
@@ -135,7 +135,12 @@ wordsProvider = {
             };
 
         rows = _.sortBy(rows, function(row) {
-            return -row.split('\t')[2];
+            var splited = row.split('\t'),
+                ipm = +splited[2],
+                r = +splited[3]
+            return (ipm > 10)
+                ? -110 - ipm
+                : -r - ipm;
         });
 
         rows.forEach(function(row) {
