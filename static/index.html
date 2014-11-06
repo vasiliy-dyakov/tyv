@@ -56,8 +56,10 @@
     </script>
 
     <script type="text/ng-template" id="resultView">
-        <p data-ng-show="knownWords">Твой результат: {{ knownWords }} русских слов</p>
-        <p data-ng-show="!knownWords">Чтобы узнать свой словарный запас пройди тест.</p>
+        <div data-ng-show="knownWords">
+            <p data-ng-show="!isCheating">Твой результат: {{ knownWords }} русских слов</p>
+            <p data-ng-show="isCheating">Были отмечены слова, которые в действительности не существуют! Попробуй пройти тест еще раз</p>
+        </div>
         <p><a href="#/">Перейти на главную страницу</a></p>
     </script>
 </body>

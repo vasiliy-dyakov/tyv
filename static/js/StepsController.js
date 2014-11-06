@@ -22,7 +22,8 @@
                 $scope.words = data.map(function(word) {
                     return {
                         value: word,
-                        checked: false
+                        checked: false,
+                        phony: false
                     };
                 });
             });
@@ -31,7 +32,8 @@
                 $scope.words = data[storage.get('currentResult')].map(function(word) {
                     return {
                         value: word,
-                        checked: false
+                        checked: false,
+                        phony: false
                     };
                 });
             });
@@ -42,9 +44,18 @@
     StepsController.prototype = {
 
         calcStep: function() {
-            var checkedCount = _.where(this.$scope.words, { checked: true }).length,
+            var isCheating = _.where(this.$scope.words, {
+                        phony: true,
+                        checked: true
+                    }).length > 0,
+                checkedCount = _.where(this.$scope.words, {
+                        phony: false,
+                        checked: true
+                    }).length,
                 currentResult,
                 knownWords;
+
+            isCheating && this.storage.set('isCheating', isCheating);
 
             if (this.$scope.step === 1) {
 

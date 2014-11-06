@@ -8,6 +8,7 @@
         'storage',
         function($scope, $routeParams, storage) {
             $scope.knownWords = storage.get('knownWords');
+            $scope.isCheating = storage.get('isCheating');
         }
     ]);
 
