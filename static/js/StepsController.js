@@ -48,7 +48,7 @@
 
             if (this.$scope.step === 1) {
 
-                currentResult = Math.floor(40000 * checkedCount / this.$scope.words.length);
+                currentResult = Math.floor(48000 * checkedCount / this.$scope.words.length);
                 // округляем до нижних 5000
                 currentResult = Math.round(Math.floor(currentResult / 5000) * 5000);
                 this.storage.set('currentResult', currentResult);
