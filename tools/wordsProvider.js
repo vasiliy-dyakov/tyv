@@ -77,9 +77,9 @@ wordsProvider = {
         var words = {},
             step;
 
-        for (var index = 0; index < 10; index++) {
-            step = index * 5000;
-            words[step] = this.getWords(48, 5000, index, index + 1);
+        for (var index = 0; index < 5; index++) {
+            step = index * 10000;
+            words[step] = this.getWords(48, 10000, index, index + 1);
             words[step] = this.mixPhony(words[step], 2);
         }
 

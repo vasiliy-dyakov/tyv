@@ -56,14 +56,14 @@
             if (this.$scope.step === 1) {
 
                 currentResult = Math.floor(48000 * checkedCount / this.$scope.words.length);
-                // округляем до нижних 5000
-                currentResult = Math.round(Math.floor(currentResult / 5000) * 5000);
+                // округляем до нижних 10000
+                currentResult = Math.round(Math.floor(currentResult / 10000) * 10000);
                 this.storage.set('currentResult', currentResult);
 
             } else {
 
                 knownWords = this.storage.get('currentResult') +
-                    Math.round(5000 * checkedCount / this.$scope.words.length);
+                    Math.round((this.storage.get('currentResult') < 40000 ? 10000 : 8000) * checkedCount / this.$scope.words.length);
                 this.storage.set('knownWords', knownWords);
 
             }
