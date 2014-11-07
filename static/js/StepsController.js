@@ -20,21 +20,17 @@
         if ($scope.step === 1) {
             $http.get('/data/words1.json').success(function(data) {
                 $scope.words = data.map(function(word) {
-                    return {
-                        value: word,
-                        checked: false,
-                        phony: false
-                    };
+                    return _.extend({
+                            checked: false
+                        }, word);
                 });
             });
         } else {
             $http.get('/data/words2.json').success(function(data) {
                 $scope.words = data[storage.get('currentResult')].map(function(word) {
-                    return {
-                        value: word,
-                        checked: false,
-                        phony: false
-                    };
+                    return _.extend({
+                            checked: false
+                        }, word);
                 });
             });
         }

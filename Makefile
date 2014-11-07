@@ -39,3 +39,8 @@ $(WEB_DRIVER): $(NPM_ROOT)
 clean:
 	@rm -rf node_modules
 	@rm -rf static/libs
+
+.PHONY: words
+words: $(NPM_ROOT)
+	node tools/wordsProvider.js
+

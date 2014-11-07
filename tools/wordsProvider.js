@@ -11,6 +11,7 @@ wordsProvider = {
     generateWords: function() {
 
         this.lemma = this.getDictionary();
+        this.phony = this.getPhony();
 
         this.saveStep1();
         this.saveStep2();
@@ -24,6 +25,7 @@ wordsProvider = {
         this.JSON_FILE = this.ROOT_PATH + 'data/lemma.json';
         this.CVS_FILE2 = this.ROOT_PATH + 'data/lemma2.num';
         this.JSON_FILE2 = this.ROOT_PATH + 'data/lemma2.json';
+        this.JSON_PHONY = this.ROOT_PATH + 'data/phony.json';
         this.DATA_PATH = this.ROOT_PATH + 'static/data/';
         this.STEP1_JSON = this.DATA_PATH + 'words1.json';
         this.STEP2_JSON = this.DATA_PATH + 'words2.json';
@@ -63,6 +65,8 @@ wordsProvider = {
         // из каждой тысячи выбрать по 1 случайному слову
         var words = this.getWords(1, 1000, 0, 48);
 
+        words = this.mixPhony(words, 2)
+
         fs.writeFileSync(this.STEP1_JSON, JSON.stringify(words, null, 4));
 
     },
@@ -70,18 +74,59 @@ wordsProvider = {
     saveStep2: function() {
 
         // сформировать для каждых 5 тысяч уточняющий набор из 40 случайных слов
-        var words = {};
+        var words = {},
+            step;
 
         for (var index = 0; index < 10; index++) {
-            words[index * 5000] = this.getWords(40, 5000, index, index + 1);
+            step = index * 5000;
+            words[step] = this.getWords(48, 5000, index, index + 1);
+            words[step] = this.mixPhony(words[step], 2);
         }
 
         fs.writeFileSync(this.STEP2_JSON, JSON.stringify(words, null, 4));
 
     },
 
+    mixPhony: function(words, phonyCount) {
+
+        var randomPosition,
+            phonyLength = this.phony.length,
+            randomPhony;
+
+        words = words.map(function(word) {
+            return {
+                value: word,
+                phony: false
+            };
+        });
+
+        while (phonyCount) {
+
+            randomPhony = this.phony[this.random(0, phonyLength - 1)];
+
+            if (!_.where(words, { value: randomPhony }).length) {
+
+                randomPosition = this.random(0, words.length - 1);
+                words.splice(randomPosition, 0, {
+                    value: randomPhony,
+                    phony: true
+                });
+                phonyCount--;
+
+            }
+
+        }
+
+        return words;
+
+    },
+
     getDictionary: function() {
         return JSON.parse(fs.readFileSync(this.JSON_FILE2));
+    },
+
+    getPhony: function() {
+        return JSON.parse(fs.readFileSync(this.JSON_PHONY));
     },
 
     random: function(min, max) {
