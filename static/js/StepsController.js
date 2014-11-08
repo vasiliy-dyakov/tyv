@@ -2,12 +2,24 @@
 
     'use strict';
 
-    var StepsController = function($scope, $http, $routeParams, $location, storage) {
+    var translations = {
+        en: {
+            'Укажи те слова, у которых знаешь хотя бы одно значение.': 'Check words you know at least one definition for.',
+            'Не указывай слова, которые встречал, но в значении сомневаешься.': 'Do not check words you have seen before, but whose meaning you are not exactly sure of.',
+            'Шаг': 'Step',
+            'из': 'of',
+            'Далее': 'Next',
+            'Узнать результат': 'Know the result'
+        }
+    };
+
+    var StepsController = function($scope, $http, $routeParams, $location, storage, i18n) {
 
         this.$scope = $scope;
         this.$location = $location;
         this.storage = storage;
 
+        i18n.add(translations);
 
         $scope.stepsCount = 2;
         $scope.step = +$routeParams.stepNum;
@@ -83,6 +95,7 @@
         '$routeParams',
         '$location',
         'storage',
+        'i18n',
         StepsController
     ]);
 

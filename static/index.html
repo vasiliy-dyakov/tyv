@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="TYV">
+<html lang="en" data-ng-app="TYV" data-ng-controller="GlobalController">
 <head>
     <meta charset="utf-8">
-    <title>Протестируй словарный запас</title>
+    <title data-ng-bind="i18n('Протестируй свой словарный запас')"></title>
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="common.css">
@@ -19,24 +19,33 @@
     <script src="libs/angular/angular.js"></script>
     <script src="libs/angular-route/angular-route.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/GlobalController.js"></script>
+    <script src="js/LangChoosingController.js"></script>
     <script src="js/StepsController.js"></script>
     <script src="js/ResultController.js"></script>
     <script src="js/storage.js"></script>
+    <script src="js/i18n.js"></script>
 
     <script type="text/ng-template" id="headerView">
         <div class="page-header">
-            <h1>Протестируй свой словарный запас<br>
-                <small>Сколько слов русского языка ты знаешь?</small></h1>
+            <div class="lang-choosing" data-ng-controller="LangChoosingController">
+                <select data-ng-model="lang">
+                    <option value="en">In English</option>
+                    <option value="ru">По-русски</option>
+                </select>
+            </div>
+            <h1>{{ i18n('Протестируй свой словарный запас') }}<br>
+                <small>{{ i18n('Сколько слов русского языка ты знаешь?') }}</small></h1>
         </div>
     </script>
 
     <script type="text/ng-template" id="stepsView">
         <div class="callout callout-primery">
-            <p>Укажи те слова, у которых знаешь хотя бы одно значение.
-            Не указывай слова, которые встречал, но в значении сомневаешься.</p>
+            <p>{{ i18n('Укажи те слова, у которых знаешь хотя бы одно значение.') }}
+            {{ i18n('Не указывай слова, которые встречал, но в значении сомневаешься.') }}</p>
         </div>
         <ul class="nav nav-tabs">
-            <li class="active"><a href="#">Шаг {{ step }} из {{ stepsCount }}</a></li>
+            <li class="active"><a href="#">{{ i18n('Шаг') }} {{ step }} {{ i18n('из') }} {{ stepsCount }}</a></li>
         </ul>
         <ul class="list-unstyled words">
             <li class="word" data-ng-repeat="word in words">
@@ -49,18 +58,19 @@
         </ul>
         <p>
             <a data-ng-click="controller.calcStep()" class="btn btn-primary">
-                <span data-ng-show="nextStep">Далее</span>
-                <span data-ng-show="!nextStep">Узнать результат</span>
+                <span data-ng-show="nextStep">{{ i18n('Далее') }}</span>
+                <span data-ng-show="!nextStep">{{ i18n('Узнать результат') }}</span>
             </a>
         </p>
     </script>
 
     <script type="text/ng-template" id="resultView">
         <div data-ng-show="knownWords">
-            <p data-ng-show="!isCheating">Твой результат: {{ knownWords }} русских слов</p>
-            <p data-ng-show="isCheating">Были отмечены слова, которые в действительности не существуют! Попробуй пройти тест еще раз</p>
+            <p data-ng-show="!isCheating">{{ i18n('Твой результат') }}: {{ knownWords }} {{ i18n('русских слов') }}</p>
+            <p data-ng-show="isCheating">{{ i18n('Были отмечены слова, которые в действительности не существуют!') }}
+                {{ i18n('Попробуй пройти тест еще раз') }}</p>
         </div>
-        <p><a href="#/">Перейти на главную страницу</a></p>
+        <p><a href="#/">{{ i18n('Пройти тест') }}</a></p>
     </script>
 </body>
 </html>
