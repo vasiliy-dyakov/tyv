@@ -18,6 +18,7 @@
     <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
     <script src="libs/angular/angular.js"></script>
     <script src="libs/angular-route/angular-route.js"></script>
+    <script src="libs/angular-cookies/angular-cookies.js"></script>
     <script src="js/app.js"></script>
     <script src="js/GlobalController.js"></script>
     <script src="js/LangChoosingController.js"></script>
@@ -29,10 +30,12 @@
     <script type="text/ng-template" id="headerView">
         <div class="page-header">
             <div class="lang-choosing" data-ng-controller="LangChoosingController">
-                <select data-ng-model="lang">
-                    <option value="en">In English</option>
-                    <option value="ru">По-русски</option>
-                </select>
+                <label class="radio-inline">
+                    <input type="radio" data-ng-model="lang" value="en">In English
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" data-ng-model="lang" value="ru">По-русски
+                </label>
             </div>
             <h1>{{ i18n['Протестируй свой словарный запас'] }}<br>
                 <small>{{ i18n['Сколько слов русского языка ты знаешь?'] }}</small></h1>

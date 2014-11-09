@@ -1,6 +1,6 @@
 'use strict';
 
-var TYV = angular.module('TYV', ['ngRoute']);
+var TYV = angular.module('TYV', ['ngRoute', 'ngCookies']);
 
 TYV.config(['$routeProvider', function($routeProvider) {
     $routeProvider

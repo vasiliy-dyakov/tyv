@@ -1,4 +1,4 @@
-TYV.factory('i18n', function() {
+TYV.factory('i18n', ['$cookies', function($cookies) {
 
     var _translations = {},
         _currentLang,
@@ -8,15 +8,20 @@ TYV.factory('i18n', function() {
 
             init: function() {
 
-                var detectedLang = this._detectLang(),
+                var lang,
                     langs = ['ru', 'en'];
 
                 langs.forEach(function(lang) {
                     _translations[lang] = {};
                 });
 
-                _currentLang = langs.indexOf(detectedLang) !== -1
-                    ? detectedLang
+                cookieLang = $cookies.lang;
+                lang = cookieLang
+                    ? cookieLang
+                    : this._detectLang();
+
+                _currentLang = langs.indexOf(lang) !== -1
+                    ? lang
                     : 'en';
 
             },
@@ -57,6 +62,7 @@ TYV.factory('i18n', function() {
 
             setLang: function(lang) {
                 _currentLang = lang;
+                this.saveLang(lang);
                 this.trigger('lang:changed');
             },
 
@@ -65,7 +71,7 @@ TYV.factory('i18n', function() {
             },
 
             saveLang: function(lang) {
-                // @TODO: Сохранять в куки
+                $cookies.lang = lang;
             },
 
             _detectLang: function() {
@@ -81,4 +87,4 @@ TYV.factory('i18n', function() {
 
     return i18n;
 
-});
+}]);
