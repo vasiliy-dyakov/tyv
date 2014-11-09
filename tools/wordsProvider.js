@@ -24,7 +24,9 @@ wordsProvider = {
         this.CVS_FILE = this.ROOT_PATH + 'data/lemma.num';
         this.JSON_FILE = this.ROOT_PATH + 'data/lemma.json';
         this.CVS_FILE2 = this.ROOT_PATH + 'data/lemma2.num';
+        this.CVS_FILE_ENG = this.ROOT_PATH + 'data/lemma_eng.num';
         this.JSON_FILE2 = this.ROOT_PATH + 'data/lemma2.json';
+        this.JSON_FILE_ENG = this.ROOT_PATH + 'data/lemma_eng.json';
         this.JSON_PHONY = this.ROOT_PATH + 'data/phony.json';
         this.DATA_PATH = this.ROOT_PATH + 'static/data/';
         this.STEP1_JSON = this.DATA_PATH + 'words1.json';
@@ -65,7 +67,7 @@ wordsProvider = {
         // из каждой тысячи выбрать по 1 случайному слову
         var words = this.getWords(1, 1000, 0, 48);
 
-        words = this.mixPhony(words, 2)
+        words = this.mixPhony(words, 2);
 
         fs.writeFileSync(this.STEP1_JSON, JSON.stringify(words, null, 4));
 
@@ -210,6 +212,51 @@ wordsProvider = {
 
         fs.writeFileSync(this.JSON_FILE2, JSON.stringify(json, null, 4));
 
+    },
+
+    convertCVS2JSONeng: function() {
+
+        var cvs = fs.readFileSync(this.CVS_FILE_ENG, {
+                encoding: 'utf-8'
+            }).replace(/(\r\n|\r)/gm,'\n'),
+
+            rows = cvs.split('\n').slice(1),
+            json = {},
+            index = 0,
+            types = {
+                n: 'noun',
+                j: 'adj',
+                v: 'verb',
+                r: 'adv'
+            };
+
+        rows = _.sortBy(rows, function(row) {
+            var splited = row.split('\t');
+            return -splited[6];
+        });
+
+        rows.forEach(function(row) {
+
+            var array = row.split('\t'),
+                type = types[array[4]] || array[4];
+
+            if (!row || this.ENABLED_TYPES.indexOf(type) === -1) return;
+
+            json[index] = {
+                value: array[3],
+                ipm: +array[6].replace(/,/g, ''),
+                type: type,
+                r: 0,
+                d: 0,
+                doc: 0
+            };
+
+            index++;
+
+        }.bind(this));
+
+        fs.writeFileSync(this.JSON_FILE_ENG, JSON.stringify(json, null, 4));
+
     }
 
 };
@@ -224,6 +271,8 @@ if (!args) {
         wordsProvider.convertCVS2JSON();
     } else if (args == 2) {
         wordsProvider.convertCVS2JSON2();
+    } else if (args == 3) {
+        wordsProvider.convertCVS2JSONeng();
     } else {
         console.log('Задание не ясно! Ничего не сделано.');
     }
