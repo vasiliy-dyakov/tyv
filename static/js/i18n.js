@@ -1,47 +1,84 @@
 TYV.factory('i18n', function() {
 
     var _translations = {},
-        langs = ['ru', 'en'],
-        detectedLang = detectLang(),
-        currentLang = langs.indexOf(detectedLang) !== -1
-            ? detectedLang
-            : 'en';
+        _currentLang,
+        _callbacks = {},
 
-    langs.forEach(function(lang) {
-        _translations[lang] = {};
-    });
+        i18n = {
 
-    i18n = function(key) {
-        return _translations[currentLang][key] || key;
-    };
+            init: function() {
 
-    i18n.add = function(translations) {
-        _.forOwn(translations, function(values, lang) {
-            _.forOwn(values, function(value, key) {
-                _translations[lang][key] = value;
-            });
-        });
-    };
+                var detectedLang = this._detectLang(),
+                    langs = ['ru', 'en'];
 
-    i18n.setLang = function(lang) {
-        currentLang = lang;
-    };
+                langs.forEach(function(lang) {
+                    _translations[lang] = {};
+                });
 
-    i18n.saveLang = function(lang) {
-        
-    };
+                _currentLang = langs.indexOf(detectedLang) !== -1
+                    ? detectedLang
+                    : 'en';
 
-    i18n.getLang = function() {
-        return currentLang;
-    };
+            },
+
+            add: function(translations) {
+                _.forOwn(translations, function(values, lang) {
+                    _.forOwn(values, function(value, key) {
+                        _translations.ru[key] || (_translations.ru[key] = key);
+                        _translations[lang][key] = value;
+                    });
+                });
+            },
+
+            getCurrentTranslations: function() {
+                return _translations[_currentLang];
+            },
+
+            bind: function(event, callback) {
+                _callbacks[event] || (_callbacks[event] = []);
+                _callbacks[event].push(callback);
+            },
+
+            unbind: function(event, callback) {
+                if (typeof callback === 'undefined') {
+                    delete _callbacks[event]
+                } else {
+                    _callbacks[event] = _.find(_callbacks[event],function(fn) {
+                        return fn !== callback ? fn : null;
+                    });
+                }
+            },
+
+            trigger: function(event) {
+                _callbacks[event] && _callbacks[event].forEach(function(callback) {
+                    callback(event);
+                });
+            },
+
+            setLang: function(lang) {
+                _currentLang = lang;
+                this.trigger('lang:changed');
+            },
+
+            getLang: function() {
+                return _currentLang;
+            },
+
+            saveLang: function(lang) {
+                // @TODO: Сохранять в куки
+            },
+
+            _detectLang: function() {
+                var detected = ((navigator.language || navigator.userLanguage) ||
+                        navigator.languages && navigator.languages[0]);
+
+                return detected && detected.split('-')[0];
+            }
+
+        };
+
+    i18n.init();
 
     return i18n;
-
-    function detectLang() {
-        var detected = ((navigator.language || navigator.userLanguage) ||
-                navigator.languages && navigator.languages[0]);
-
-        return detected && detected.split('-')[0];
-    }
 
 });

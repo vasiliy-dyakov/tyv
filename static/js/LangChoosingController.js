@@ -10,7 +10,6 @@
             $scope.$watch(function() {
                if ($scope.lang !== i18n.getLang()) {
                     i18n.setLang($scope.lang);
-                    i18n.saveLang($scope.lang);
                 }
             });
         }

@@ -13,8 +13,15 @@
         '$scope',
         'i18n',
         function($scope, i18n) {
+
             i18n.add(translations);
-            $scope.i18n = i18n;
+
+            $scope.i18n = i18n.getCurrentTranslations();
+
+            i18n.bind('lang:changed', function() {
+                $scope.i18n = i18n.getCurrentTranslations();
+            });
+
         }
     ]);
 
