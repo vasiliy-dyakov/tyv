@@ -33,12 +33,26 @@ wordsProvider = {
 
     setConstantsRu: function() {
 
-        this.CVS_FILE = this.ROOT_PATH + 'data/lemma2.num';
-        this.JSON_FILE = this.ROOT_PATH + 'data/lemma2.json';
+        this.CVS_FILE = this.ROOT_PATH + 'data/lemma.num';
+        this.JSON_FILE = this.ROOT_PATH + 'data/lemma.json';
         this.JSON_PHONY = this.ROOT_PATH + 'data/phony.json';
         this.DATA_PATH = this.ROOT_PATH + 'static/data/ru/';
         this.STEP1_JSON = this.DATA_PATH + 'words1.json';
         this.STEP2_JSON = this.DATA_PATH + 'words2.json';
+        this.STEP1 = {
+            numWordsInBundle: 1,
+            bundleSize: 1000,
+            minBundle: 0,
+            maxBundle: 48,
+            countPhony: 2
+        };
+        this.STEP2 = {
+            minStep: 0,
+            maxStep: 5,
+            stepSize: 10000,
+            stepCount: 48,
+            countPhony: 2
+        };
 
     },
 
@@ -50,6 +64,20 @@ wordsProvider = {
         this.DATA_PATH = this.ROOT_PATH + 'static/data/en/';
         this.STEP1_JSON = this.DATA_PATH + 'words1.json';
         this.STEP2_JSON = this.DATA_PATH + 'words2.json';
+        this.STEP1 = {
+            numWordsInBundle: 2,
+            bundleSize: 1000,
+            minBundle: 0,
+            maxBundle: 20,
+            countPhony: 2
+        };
+        this.STEP2 = {
+            minStep: 0,
+            maxStep: 4,
+            stepSize: 5000,
+            stepCount: 40,
+            countPhony: 2
+        };
 
     },
 
@@ -83,9 +111,14 @@ wordsProvider = {
     saveStep1: function() {
 
         // из каждой тысячи выбрать по 1 случайному слову
-        var words = this.getWords(1, 1000, 0, 48);
+        var words = this.getWords(
+                this.STEP1.numWordsInBundle,
+                this.STEP1.bundleSize,
+                this.STEP1.minBundle,
+                this.STEP1.maxBundle
+            );
 
-        words = this.mixPhony(words, 2);
+        words = this.mixPhony(words, this.STEP1.countPhony);
 
         fs.writeFileSync(this.STEP1_JSON, JSON.stringify(words, null, 4));
 
@@ -93,14 +126,13 @@ wordsProvider = {
 
     saveStep2: function() {
 
-        // сформировать для каждых 5 тысяч уточняющий набор из 40 случайных слов
         var words = {},
             step;
 
-        for (var index = 0; index < 5; index++) {
-            step = index * 10000;
-            words[step] = this.getWords(48, 10000, index, index + 1);
-            words[step] = this.mixPhony(words[step], 2);
+        for (var index = this.STEP2.minStep; index < this.STEP2.maxStep; index++) {
+            step = index * this.STEP2.stepSize;
+            words[step] = this.getWords(this.STEP2.stepCount, this.STEP2.stepSize, index, index + 1);
+            words[step] = this.mixPhony(words[step], this.STEP2.countPhony);
         }
 
         fs.writeFileSync(this.STEP2_JSON, JSON.stringify(words, null, 4));
