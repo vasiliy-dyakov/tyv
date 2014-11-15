@@ -42,5 +42,6 @@ clean:
 
 .PHONY: words
 words: $(NPM_ROOT)
-	node tools/wordsProvider.js
+	node tools/wordsProvider.js ru
+	node tools/wordsProvider.js en
 

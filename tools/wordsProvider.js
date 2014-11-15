@@ -5,10 +5,18 @@ var fs = require('fs'),
 wordsProvider = {
 
     init: function() {
-        this.setConstants();
+        this.setConstantsCommon();
     },
 
-    generateWords: function() {
+    generateWords: function(lang) {
+
+        lang = lang || 'ru';
+
+        if (lang === 'ru') {
+            this.setConstantsRu();
+        } else {
+            this.setConstantsEn();
+        }
 
         this.lemma = this.getDictionary();
         this.phony = this.getPhony();
@@ -18,20 +26,30 @@ wordsProvider = {
 
     },
 
-    setConstants: function() {
-
+    setConstantsCommon: function() {
         this.ROOT_PATH = './';
-        this.CVS_FILE = this.ROOT_PATH + 'data/lemma.num';
-        this.JSON_FILE = this.ROOT_PATH + 'data/lemma.json';
-        this.CVS_FILE2 = this.ROOT_PATH + 'data/lemma2.num';
-        this.CVS_FILE_ENG = this.ROOT_PATH + 'data/lemma_eng.num';
-        this.JSON_FILE2 = this.ROOT_PATH + 'data/lemma2.json';
-        this.JSON_FILE_ENG = this.ROOT_PATH + 'data/lemma_eng.json';
+        this.ENABLED_TYPES = ['noun', 'verb', 'adj', 'adv'];
+    },
+
+    setConstantsRu: function() {
+
+        this.CVS_FILE = this.ROOT_PATH + 'data/lemma2.num';
+        this.JSON_FILE = this.ROOT_PATH + 'data/lemma2.json';
         this.JSON_PHONY = this.ROOT_PATH + 'data/phony.json';
-        this.DATA_PATH = this.ROOT_PATH + 'static/data/';
+        this.DATA_PATH = this.ROOT_PATH + 'static/data/ru/';
         this.STEP1_JSON = this.DATA_PATH + 'words1.json';
         this.STEP2_JSON = this.DATA_PATH + 'words2.json';
-        this.ENABLED_TYPES = ['noun', 'verb', 'adj', 'adv'];
+
+    },
+
+    setConstantsEn: function() {
+
+        this.CVS_FILE = this.ROOT_PATH + 'data/lemma_en.num';
+        this.JSON_FILE = this.ROOT_PATH + 'data/lemma_en.json';
+        this.JSON_PHONY = this.ROOT_PATH + 'data/phony_en.json';
+        this.DATA_PATH = this.ROOT_PATH + 'static/data/en/';
+        this.STEP1_JSON = this.DATA_PATH + 'words1.json';
+        this.STEP2_JSON = this.DATA_PATH + 'words2.json';
 
     },
 
@@ -124,7 +142,7 @@ wordsProvider = {
     },
 
     getDictionary: function() {
-        return JSON.parse(fs.readFileSync(this.JSON_FILE2));
+        return JSON.parse(fs.readFileSync(this.JSON_FILE));
     },
 
     getPhony: function() {
@@ -135,39 +153,11 @@ wordsProvider = {
         return Math.floor(Math.random() * (max - min)) + min;
     },
 
-    convertCVS2JSON: function() {
+    convertCvs2JsonRu: function() {
+
+        this.setConstantsRu();
 
         var cvs = fs.readFileSync(this.CVS_FILE, {
-                encoding: 'utf-8'
-            }).replace(/(\r\n|\r)/gm,'\n'),
-
-            rows = cvs.split('\n'),
-            json = {},
-            index = 0;
-
-        rows.forEach(function(row) {
-
-            var array = row.split(' ');
-
-            if (!row || this.ENABLED_TYPES.indexOf(array[3]) === -1) return;
-
-            json[index] = {
-                value: array[2],
-                ipm: +array[1],
-                type: array[3]
-            };
-
-            index++;
-
-        }.bind(this));
-
-        fs.writeFileSync(this.JSON_FILE, JSON.stringify(json, null, 4));
-
-    },
-
-    convertCVS2JSON2: function() {
-
-        var cvs = fs.readFileSync(this.CVS_FILE2, {
                 encoding: 'utf-8'
             }).replace(/(\r\n|\r)/gm,'\n'),
 
@@ -210,13 +200,15 @@ wordsProvider = {
 
         }.bind(this));
 
-        fs.writeFileSync(this.JSON_FILE2, JSON.stringify(json, null, 4));
+        fs.writeFileSync(this.JSON_FILE, JSON.stringify(json, null, 4));
 
     },
 
-    convertCVS2JSONeng: function() {
+    convertCvs2JsonEn: function() {
 
-        var cvs = fs.readFileSync(this.CVS_FILE_ENG, {
+        this.setConstantsEn();
+
+        var cvs = fs.readFileSync(this.CVS_FILE, {
                 encoding: 'utf-8'
             }).replace(/(\r\n|\r)/gm,'\n'),
 
@@ -255,7 +247,7 @@ wordsProvider = {
 
         }.bind(this));
 
-        fs.writeFileSync(this.JSON_FILE_ENG, JSON.stringify(json, null, 4));
+        fs.writeFileSync(this.JSON_FILE, JSON.stringify(json, null, 4));
 
     }
 
@@ -265,14 +257,16 @@ var args = process.argv.slice(2)[0];
 
 wordsProvider.init();
 if (!args) {
-    wordsProvider.generateWords();
+    wordsProvider.generateWords('ru');
 } else {
-    if (args == 1) {
-        wordsProvider.convertCVS2JSON();
-    } else if (args == 2) {
-        wordsProvider.convertCVS2JSON2();
-    } else if (args == 3) {
-        wordsProvider.convertCVS2JSONeng();
+    if (args == 'ru') {
+        wordsProvider.generateWords('ru');
+    } else if (args == 'en') {
+        wordsProvider.generateWords('en');
+    } else if (args == 'convert_ru') {
+        wordsProvider.convertCvs2JsonRu();
+    } else if (args == 'convert_en') {
+        wordsProvider.convertCvs2JsonEn();
     } else {
         console.log('Задание не ясно! Ничего не сделано.');
     }
