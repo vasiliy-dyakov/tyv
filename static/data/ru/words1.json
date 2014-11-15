@@ -1,0 +1,206 @@
+{
+    "words": [
+        {
+            "value": "разработка",
+            "phony": false
+        },
+        {
+            "value": "дополнительный",
+            "phony": false
+        },
+        {
+            "value": "кордок",
+            "phony": true
+        },
+        {
+            "value": "колонна",
+            "phony": false
+        },
+        {
+            "value": "совместно",
+            "phony": false
+        },
+        {
+            "value": "печатный",
+            "phony": false
+        },
+        {
+            "value": "удостоверение",
+            "phony": false
+        },
+        {
+            "value": "управляющий",
+            "phony": false
+        },
+        {
+            "value": "примерный",
+            "phony": false
+        },
+        {
+            "value": "виться",
+            "phony": false
+        },
+        {
+            "value": "сторонний",
+            "phony": false
+        },
+        {
+            "value": "опекать",
+            "phony": false
+        },
+        {
+            "value": "вынос",
+            "phony": false
+        },
+        {
+            "value": "диаграмма",
+            "phony": false
+        },
+        {
+            "value": "свечение",
+            "phony": false
+        },
+        {
+            "value": "кованый",
+            "phony": false
+        },
+        {
+            "value": "полынь",
+            "phony": false
+        },
+        {
+            "value": "сода",
+            "phony": false
+        },
+        {
+            "value": "иноземный",
+            "phony": false
+        },
+        {
+            "value": "кафель",
+            "phony": false
+        },
+        {
+            "value": "рогатка",
+            "phony": false
+        },
+        {
+            "value": "покарать",
+            "phony": false
+        },
+        {
+            "value": "единодушие",
+            "phony": false
+        },
+        {
+            "value": "гиблый",
+            "phony": false
+        },
+        {
+            "value": "непотребный",
+            "phony": false
+        },
+        {
+            "value": "пернатый",
+            "phony": false
+        },
+        {
+            "value": "припоздниться",
+            "phony": false
+        },
+        {
+            "value": "пантомима",
+            "phony": false
+        },
+        {
+            "value": "старобит",
+            "phony": true
+        },
+        {
+            "value": "аптекарский",
+            "phony": false
+        },
+        {
+            "value": "перегораживать",
+            "phony": false
+        },
+        {
+            "value": "застегиваться",
+            "phony": false
+        },
+        {
+            "value": "ухватка",
+            "phony": false
+        },
+        {
+            "value": "правомерно",
+            "phony": false
+        },
+        {
+            "value": "приумножение",
+            "phony": false
+        },
+        {
+            "value": "перепроверять",
+            "phony": false
+        },
+        {
+            "value": "доковылять",
+            "phony": false
+        },
+        {
+            "value": "невидимость",
+            "phony": false
+        },
+        {
+            "value": "степ",
+            "phony": false
+        },
+        {
+            "value": "угодливость",
+            "phony": false
+        },
+        {
+            "value": "наличка",
+            "phony": false
+        },
+        {
+            "value": "чайничек",
+            "phony": false
+        },
+        {
+            "value": "двоичный",
+            "phony": false
+        },
+        {
+            "value": "старухин",
+            "phony": false
+        },
+        {
+            "value": "сокрушающий",
+            "phony": false
+        },
+        {
+            "value": "иероглифический",
+            "phony": false
+        },
+        {
+            "value": "ажиотажный",
+            "phony": false
+        },
+        {
+            "value": "осаждение",
+            "phony": false
+        },
+        {
+            "value": "преклониться",
+            "phony": false
+        },
+        {
+            "value": "апоптоз",
+            "phony": false
+        }
+    ],
+    "dictionarySize": 48798,
+    "stepSize": 10000
+}

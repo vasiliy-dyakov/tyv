@@ -5,7 +5,7 @@
     var translations = {
         en: {
             'Твой результат': 'Your result',
-            'русских слов': 'russian words',
+            'слов': 'words',
             'Были отмечены слова, которые в действительности не существуют!': 'You select the word that does not really exist!',
             'Попробуй пройти тест еще раз': 'Try to pass the test again',
             'Пройти тест': 'Take the test'

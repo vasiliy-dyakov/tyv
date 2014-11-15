@@ -12,6 +12,11 @@
                     i18n.setLang($scope.lang);
                 }
             });
+            $scope.$watch(function() {
+                if ($scope.wordsLang !== i18n.getWordsLang()) {
+                    i18n.setWordsLang($scope.wordsLang);
+                }
+            });
         }
     ]);
 

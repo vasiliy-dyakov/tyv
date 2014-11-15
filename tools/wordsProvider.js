@@ -116,11 +116,18 @@ wordsProvider = {
                 this.STEP1.bundleSize,
                 this.STEP1.minBundle,
                 this.STEP1.maxBundle
-            );
+            ),
+            result;
 
         words = this.mixPhony(words, this.STEP1.countPhony);
 
-        fs.writeFileSync(this.STEP1_JSON, JSON.stringify(words, null, 4));
+        result = {
+            words: words,
+            dictionarySize: _.keys(this.lemma).length,
+            stepSize: this.STEP2.stepSize
+        };
+
+        fs.writeFileSync(this.STEP1_JSON, JSON.stringify(result, null, 4));
 
     },
 

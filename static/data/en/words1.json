@@ -1,0 +1,174 @@
+{
+    "words": [
+        {
+            "value": "foreign",
+            "phony": false
+        },
+        {
+            "value": "responsibility",
+            "phony": false
+        },
+        {
+            "value": "seat",
+            "phony": false
+        },
+        {
+            "value": "explanation",
+            "phony": false
+        },
+        {
+            "value": "workshop",
+            "phony": false
+        },
+        {
+            "value": "proposed",
+            "phony": false
+        },
+        {
+            "value": "strike",
+            "phony": false
+        },
+        {
+            "value": "basin",
+            "phony": false
+        },
+        {
+            "value": "complement",
+            "phony": false
+        },
+        {
+            "value": "drought",
+            "phony": false
+        },
+        {
+            "value": "joke",
+            "phony": false
+        },
+        {
+            "value": "brick",
+            "phony": false
+        },
+        {
+            "value": "embark",
+            "phony": false
+        },
+        {
+            "value": "endanger",
+            "phony": false
+        },
+        {
+            "value": "livelihood",
+            "phony": false
+        },
+        {
+            "value": "fearful",
+            "phony": false
+        },
+        {
+            "value": "undercut",
+            "phony": false
+        },
+        {
+            "value": "percentile",
+            "phony": false
+        },
+        {
+            "value": "septic",
+            "phony": false
+        },
+        {
+            "value": "helpless",
+            "phony": false
+        },
+        {
+            "value": "hop",
+            "phony": false
+        },
+        {
+            "value": "microcosm",
+            "phony": false
+        },
+        {
+            "value": "parachute",
+            "phony": false
+        },
+        {
+            "value": "northward",
+            "phony": false
+        },
+        {
+            "value": "spruce",
+            "phony": false
+        },
+        {
+            "value": "boon",
+            "phony": false
+        },
+        {
+            "value": "brute",
+            "phony": false
+        },
+        {
+            "value": "randomization",
+            "phony": false
+        },
+        {
+            "value": "workbook",
+            "phony": false
+        },
+        {
+            "value": "heredity",
+            "phony": false
+        },
+        {
+            "value": "desolate",
+            "phony": false
+        },
+        {
+            "value": "frailty",
+            "phony": false
+        },
+        {
+            "value": "wrust",
+            "phony": true
+        },
+        {
+            "value": "two-parent",
+            "phony": false
+        },
+        {
+            "value": "chip",
+            "phony": false
+        },
+        {
+            "value": "isthmus",
+            "phony": false
+        },
+        {
+            "value": "morbid",
+            "phony": false
+        },
+        {
+            "value": "toxics",
+            "phony": false
+        },
+        {
+            "value": "mobaine",
+            "phony": true
+        },
+        {
+            "value": "turban",
+            "phony": false
+        },
+        {
+            "value": "impoundment",
+            "phony": false
+        },
+        {
+            "value": "indexical",
+            "phony": false
+        }
+    ],
+    "dictionarySize": 20423,
+    "stepSize": 5000
+}

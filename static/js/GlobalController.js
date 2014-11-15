@@ -23,12 +23,11 @@
             i18n.add(translations);
 
             $scope.i18n = i18n.getCurrentTranslations();
-            $scope.wordsLang = 'ru';
+            $scope.wordsLang = i18n.getWordsLang();
 
             i18n.bind('lang:changed', function() {
                 $scope.i18n = i18n.getCurrentTranslations();
             });
-
         }
     ]);
 

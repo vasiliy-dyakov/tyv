@@ -2,6 +2,8 @@ TYV.factory('i18n', ['$cookies', function($cookies) {
 
     var _translations = {},
         _currentLang,
+        // Язык, который тестируем
+        _wordsLang,
         _callbacks = {},
 
         i18n = {
@@ -23,6 +25,8 @@ TYV.factory('i18n', ['$cookies', function($cookies) {
                 _currentLang = langs.indexOf(lang) !== -1
                     ? lang
                     : 'en';
+
+                _wordsLang = 'ru';
 
             },
 
@@ -68,6 +72,15 @@ TYV.factory('i18n', ['$cookies', function($cookies) {
 
             getLang: function() {
                 return _currentLang;
+            },
+
+            setWordsLang: function(lang) {
+                _wordsLang = lang;
+                this.trigger('wordsLang:changed');
+            },
+
+            getWordsLang: function() {
+                return _wordsLang;
             },
 
             saveLang: function(lang) {
