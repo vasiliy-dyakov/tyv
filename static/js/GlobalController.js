@@ -5,7 +5,13 @@
     var translations = {
         en: {
             'Протестируй свой словарный запас': 'Test your russian vocabulary',
-            'Сколько слов русского языка ты знаешь?': 'How many russians words do you know?'
+            'Сколько слов': 'How many',
+            'русского': 'russians',
+            'английского': 'english',
+            'языка ты знаешь?': 'words do you know?',
+            'Словарь': 'Words',
+            'русский': 'russian',
+            'английский': 'english'
         }
     };
 
@@ -17,6 +23,7 @@
             i18n.add(translations);
 
             $scope.i18n = i18n.getCurrentTranslations();
+            $scope.wordsLang = 'ru';
 
             i18n.bind('lang:changed', function() {
                 $scope.i18n = i18n.getCurrentTranslations();

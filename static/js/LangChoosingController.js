@@ -8,7 +8,7 @@
         function($scope, i18n) {
             $scope.lang = i18n.getLang();
             $scope.$watch(function() {
-               if ($scope.lang !== i18n.getLang()) {
+                if ($scope.lang !== i18n.getLang()) {
                     i18n.setLang($scope.lang);
                 }
             });

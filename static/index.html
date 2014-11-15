@@ -37,8 +37,23 @@
                     <input type="radio" data-ng-model="lang" value="ru">По-русски
                 </label>
             </div>
+            <div class="words-lang-choosing">
+                {{ i18n['Словарь'] }}:
+                <select data-ng-model="wordsLang">
+                    <option value="ru">{{ i18n['русский'] }}</option>
+                    <option value="en">{{ i18n['английский'] }}</option>
+                </select>
+            </div>
             <h1>{{ i18n['Протестируй свой словарный запас'] }}<br>
-                <small>{{ i18n['Сколько слов русского языка ты знаешь?'] }}</small></h1>
+                <small class="{{ wordsLang }}">
+                    {{ i18n['Сколько слов'] }}
+                    <span class="words-lang-ru">
+                        {{ i18n['русского'] }}
+                    </span>
+                    <span class="words-lang-en">
+                        {{ i18n['английского'] }}
+                    </span>
+                    {{ i18n['языка ты знаешь?'] }}</small></h1>
         </div>
     </script>
 

@@ -1,6 +1,13 @@
 .lang-choosing {
     float: right;
     margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.words-lang-choosing {
+    float: right;
+    clear: right;
+    margin-left: 20px;
 }
 
 .page-header {
@@ -34,4 +41,14 @@
 .word .checkbox {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.words-lang-ru,
+.words-lang-en {
+    display: none;
+}
+
+.ru .words-lang-ru,
+.en .words-lang-en {
+    display: inline-block;
 }
