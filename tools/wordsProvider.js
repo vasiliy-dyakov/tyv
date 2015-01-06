@@ -54,6 +54,8 @@ wordsProvider = {
             countPhony: 2
         };
 
+        this.dictionarySizeCoef = 1;
+
     },
 
     setConstantsEn: function() {
@@ -65,19 +67,21 @@ wordsProvider = {
         this.STEP1_JSON = this.DATA_PATH + 'words1.json';
         this.STEP2_JSON = this.DATA_PATH + 'words2.json';
         this.STEP1 = {
-            numWordsInBundle: 2,
-            bundleSize: 1000,
+            numWordsInBundle: 1,
+            bundleSize: 25,
             minBundle: 0,
-            maxBundle: 20,
+            maxBundle: 184,
             countPhony: 2
         };
         this.STEP2 = {
             minStep: 0,
-            maxStep: 4,
-            stepSize: 5000,
-            stepCount: 40,
+            maxStep: 12,
+            stepSize: 714,
+            stepCount: 46,
             countPhony: 2
         };
+
+        this.dictionarySizeCoef = 7;
 
     },
 
@@ -117,14 +121,15 @@ wordsProvider = {
                 this.STEP1.minBundle,
                 this.STEP1.maxBundle
             ),
+            coef = this.dictionarySizeCoef,
             result;
 
         words = this.mixPhony(words, this.STEP1.countPhony);
 
         result = {
             words: words,
-            dictionarySize: _.keys(this.lemma).length,
-            stepSize: this.STEP2.stepSize
+            dictionarySize: _.keys(this.lemma).length * coef,
+            stepSize: this.STEP2.stepSize * coef
         };
 
         fs.writeFileSync(this.STEP1_JSON, JSON.stringify(result, null, 4));
@@ -134,10 +139,11 @@ wordsProvider = {
     saveStep2: function() {
 
         var words = {},
-            step;
+            step,
+            coef = this.dictionarySizeCoef;
 
         for (var index = this.STEP2.minStep; index < this.STEP2.maxStep; index++) {
-            step = index * this.STEP2.stepSize;
+            step = index * this.STEP2.stepSize * coef;
             words[step] = this.getWords(this.STEP2.stepCount, this.STEP2.stepSize, index, index + 1);
             words[step] = this.mixPhony(words[step], this.STEP2.countPhony);
         }
@@ -261,21 +267,21 @@ wordsProvider = {
                 r: 'adv'
             };
 
-        rows = _.sortBy(rows, function(row) {
-            var splited = row.split('\t');
-            return -splited[6];
-        });
+        // rows = _.sortBy(rows, function(row) {
+        //     var splited = row.split('\t');
+        //     return -splited[4];
+        // });
 
         rows.forEach(function(row) {
 
             var array = row.split('\t'),
-                type = types[array[4]] || array[4];
+                type = types[array[2]] || array[2];
 
             if (!row || this.ENABLED_TYPES.indexOf(type) === -1) return;
 
             json[index] = {
-                value: array[3],
-                ipm: +array[6].replace(/,/g, ''),
+                value: array[1],
+                ipm: +array[3].replace(/,/g, ''),
                 type: type,
                 r: 0,
                 d: 0,

@@ -1,131 +1,371 @@
 {
     "words": [
         {
-            "value": "foreign",
+            "value": "give",
             "phony": false
         },
         {
-            "value": "responsibility",
+            "value": "human",
             "phony": false
         },
         {
-            "value": "seat",
+            "value": "oil",
             "phony": false
         },
         {
-            "value": "explanation",
+            "value": "feeling",
             "phony": false
         },
         {
-            "value": "workshop",
+            "value": "imagine",
             "phony": false
         },
         {
-            "value": "proposed",
+            "value": "sky",
             "phony": false
         },
         {
-            "value": "strike",
+            "value": "spot",
             "phony": false
         },
         {
-            "value": "basin",
+            "value": "neighbor",
             "phony": false
         },
         {
-            "value": "complement",
+            "value": "ought",
             "phony": false
         },
         {
-            "value": "drought",
+            "value": "clear",
             "phony": false
         },
         {
-            "value": "joke",
+            "value": "depression",
             "phony": false
         },
         {
-            "value": "brick",
+            "value": "interview",
             "phony": false
         },
         {
-            "value": "embark",
+            "value": "entry",
             "phony": false
         },
         {
-            "value": "endanger",
+            "value": "normally",
             "phony": false
         },
         {
-            "value": "livelihood",
+            "value": "transfer",
             "phony": false
         },
         {
-            "value": "fearful",
+            "value": "Irish",
             "phony": false
         },
         {
-            "value": "undercut",
+            "value": "punishment",
             "phony": false
         },
         {
-            "value": "percentile",
+            "value": "basket",
             "phony": false
         },
         {
-            "value": "septic",
+            "value": "export",
             "phony": false
         },
         {
-            "value": "helpless",
+            "value": "past",
             "phony": false
         },
         {
-            "value": "hop",
+            "value": "bath",
             "phony": false
         },
         {
-            "value": "microcosm",
+            "value": "undertake",
             "phony": false
         },
         {
-            "value": "parachute",
+            "value": "conspiracy",
             "phony": false
         },
         {
-            "value": "northward",
+            "value": "dissolve",
             "phony": false
         },
         {
-            "value": "spruce",
+            "value": "ideal",
             "phony": false
         },
         {
-            "value": "boon",
+            "value": "screw",
             "phony": false
         },
         {
-            "value": "brute",
+            "value": "tile",
             "phony": false
         },
         {
-            "value": "randomization",
+            "value": "inability",
             "phony": false
         },
         {
-            "value": "workbook",
+            "value": "taxi",
             "phony": false
         },
         {
-            "value": "heredity",
+            "value": "nationally",
             "phony": false
         },
         {
-            "value": "desolate",
+            "value": "precedent",
             "phony": false
         },
         {
-            "value": "frailty",
+            "value": "embarrassing",
+            "phony": false
+        },
+        {
+            "value": "nitrogen",
+            "phony": false
+        },
+        {
+            "value": "gauge",
+            "phony": false
+        },
+        {
+            "value": "protester",
+            "phony": false
+        },
+        {
+            "value": "marked",
+            "phony": false
+        },
+        {
+            "value": "sergeant",
+            "phony": false
+        },
+        {
+            "value": "khlain",
+            "phony": true
+        },
+        {
+            "value": "mourn",
+            "phony": false
+        },
+        {
+            "value": "sound",
+            "phony": false
+        },
+        {
+            "value": "autobiography",
+            "phony": false
+        },
+        {
+            "value": "veil",
+            "phony": false
+        },
+        {
+            "value": "vastly",
+            "phony": false
+        },
+        {
+            "value": "enjoyment",
+            "phony": false
+        },
+        {
+            "value": "specification",
+            "phony": false
+        },
+        {
+            "value": "grouping",
+            "phony": false
+        },
+        {
+            "value": "imbalance",
+            "phony": false
+        },
+        {
+            "value": "reviewer",
+            "phony": false
+        },
+        {
+            "value": "bargain",
+            "phony": false
+        },
+        {
+            "value": "paranoid",
+            "phony": false
+        },
+        {
+            "value": "makeshift",
+            "phony": false
+        },
+        {
+            "value": "participating",
+            "phony": false
+        },
+        {
+            "value": "fluorescent",
+            "phony": false
+        },
+        {
+            "value": "optics",
+            "phony": false
+        },
+        {
+            "value": "broom",
+            "phony": false
+        },
+        {
+            "value": "hiker",
+            "phony": false
+        },
+        {
+            "value": "called",
+            "phony": false
+        },
+        {
+            "value": "runaway",
+            "phony": false
+        },
+        {
+            "value": "vain",
+            "phony": false
+        },
+        {
+            "value": "disintegrate",
+            "phony": false
+        },
+        {
+            "value": "pride",
+            "phony": false
+        },
+        {
+            "value": "electromagnetic",
+            "phony": false
+        },
+        {
+            "value": "attributable",
+            "phony": false
+        },
+        {
+            "value": "shallot",
+            "phony": false
+        },
+        {
+            "value": "canister",
+            "phony": false
+        },
+        {
+            "value": "incorporation",
+            "phony": false
+        },
+        {
+            "value": "coherence",
+            "phony": false
+        },
+        {
+            "value": "intermediary",
+            "phony": false
+        },
+        {
+            "value": "protrude",
+            "phony": false
+        },
+        {
+            "value": "compulsive",
+            "phony": false
+        },
+        {
+            "value": "tubing",
+            "phony": false
+        },
+        {
+            "value": "illiterate",
+            "phony": false
+        },
+        {
+            "value": "trance",
+            "phony": false
+        },
+        {
+            "value": "pawn",
+            "phony": false
+        },
+        {
+            "value": "baptize",
+            "phony": false
+        },
+        {
+            "value": "mindless",
+            "phony": false
+        },
+        {
+            "value": "shellfish",
+            "phony": false
+        },
+        {
+            "value": "stout",
+            "phony": false
+        },
+        {
+            "value": "spatula",
+            "phony": false
+        },
+        {
+            "value": "sinful",
+            "phony": false
+        },
+        {
+            "value": "gloved",
+            "phony": false
+        },
+        {
+            "value": "erect",
+            "phony": false
+        },
+        {
+            "value": "conjunction",
+            "phony": false
+        },
+        {
+            "value": "seven-year-old",
+            "phony": false
+        },
+        {
+            "value": "penthouse",
+            "phony": false
+        },
+        {
+            "value": "sap",
+            "phony": false
+        },
+        {
+            "value": "caseworker",
+            "phony": false
+        },
+        {
+            "value": "leaky",
+            "phony": false
+        },
+        {
+            "value": "maniac",
+            "phony": false
+        },
+        {
+            "value": "intolerant",
+            "phony": false
+        },
+        {
+            "value": "garland",
+            "phony": false
+        },
+        {
+            "value": "quandary",
             "phony": false
         },
         {
@@ -133,42 +373,378 @@
             "phony": true
         },
         {
-            "value": "two-parent",
+            "value": "dill",
             "phony": false
         },
         {
-            "value": "chip",
+            "value": "silt",
             "phony": false
         },
         {
-            "value": "isthmus",
+            "value": "multiracial",
             "phony": false
         },
         {
-            "value": "morbid",
+            "value": "accession",
             "phony": false
         },
         {
-            "value": "toxics",
+            "value": "confectioner",
             "phony": false
         },
         {
-            "value": "mobaine",
-            "phony": true
-        },
-        {
-            "value": "turban",
+            "value": "aft",
             "phony": false
         },
         {
-            "value": "impoundment",
+            "value": "truckload",
             "phony": false
         },
         {
-            "value": "indexical",
+            "value": "deregulate",
+            "phony": false
+        },
+        {
+            "value": "gallant",
+            "phony": false
+        },
+        {
+            "value": "memorialize",
+            "phony": false
+        },
+        {
+            "value": "peacemaker",
+            "phony": false
+        },
+        {
+            "value": "blemish",
+            "phony": false
+        },
+        {
+            "value": "to-do",
+            "phony": false
+        },
+        {
+            "value": "cauldron",
+            "phony": false
+        },
+        {
+            "value": "peep",
+            "phony": false
+        },
+        {
+            "value": "untimely",
+            "phony": false
+        },
+        {
+            "value": "foursome",
+            "phony": false
+        },
+        {
+            "value": "wrack",
+            "phony": false
+        },
+        {
+            "value": "birthright",
+            "phony": false
+        },
+        {
+            "value": "unplugged",
+            "phony": false
+        },
+        {
+            "value": "glimmer",
+            "phony": false
+        },
+        {
+            "value": "intensified",
+            "phony": false
+        },
+        {
+            "value": "weatherman",
+            "phony": false
+        },
+        {
+            "value": "covariate",
+            "phony": false
+        },
+        {
+            "value": "Oscar-winning",
+            "phony": false
+        },
+        {
+            "value": "caddy",
+            "phony": false
+        },
+        {
+            "value": "personage",
+            "phony": false
+        },
+        {
+            "value": "psychoanalyst",
+            "phony": false
+        },
+        {
+            "value": "upstage",
+            "phony": false
+        },
+        {
+            "value": "taping",
+            "phony": false
+        },
+        {
+            "value": "milking",
+            "phony": false
+        },
+        {
+            "value": "fiduciary",
+            "phony": false
+        },
+        {
+            "value": "cant",
+            "phony": false
+        },
+        {
+            "value": "fag",
+            "phony": false
+        },
+        {
+            "value": "filibuster",
+            "phony": false
+        },
+        {
+            "value": "slippage",
+            "phony": false
+        },
+        {
+            "value": "bluster",
+            "phony": false
+        },
+        {
+            "value": "third-floor",
+            "phony": false
+        },
+        {
+            "value": "multiplex",
+            "phony": false
+        },
+        {
+            "value": "money-making",
+            "phony": false
+        },
+        {
+            "value": "glittery",
+            "phony": false
+        },
+        {
+            "value": "womanly",
+            "phony": false
+        },
+        {
+            "value": "shrewdly",
+            "phony": false
+        },
+        {
+            "value": "punt",
+            "phony": false
+        },
+        {
+            "value": "scandalize",
+            "phony": false
+        },
+        {
+            "value": "prompting",
+            "phony": false
+        },
+        {
+            "value": "detoxification",
+            "phony": false
+        },
+        {
+            "value": "plover",
+            "phony": false
+        },
+        {
+            "value": "stimulator",
+            "phony": false
+        },
+        {
+            "value": "femoral",
+            "phony": false
+        },
+        {
+            "value": "phase-out",
+            "phony": false
+        },
+        {
+            "value": "specious",
+            "phony": false
+        },
+        {
+            "value": "rollicking",
+            "phony": false
+        },
+        {
+            "value": "voiceless",
+            "phony": false
+        },
+        {
+            "value": "civilizing",
+            "phony": false
+        },
+        {
+            "value": "jackhammer",
+            "phony": false
+        },
+        {
+            "value": "convolute",
+            "phony": false
+        },
+        {
+            "value": "section",
+            "phony": false
+        },
+        {
+            "value": "midshipman",
+            "phony": false
+        },
+        {
+            "value": "crystallized",
+            "phony": false
+        },
+        {
+            "value": "riff",
+            "phony": false
+        },
+        {
+            "value": "rapturous",
+            "phony": false
+        },
+        {
+            "value": "all-wheel",
+            "phony": false
+        },
+        {
+            "value": "pliant",
+            "phony": false
+        },
+        {
+            "value": "reaper",
+            "phony": false
+        },
+        {
+            "value": "five-story",
+            "phony": false
+        },
+        {
+            "value": "filmy",
+            "phony": false
+        },
+        {
+            "value": "greenback",
+            "phony": false
+        },
+        {
+            "value": "protean",
+            "phony": false
+        },
+        {
+            "value": "soft-tissue",
+            "phony": false
+        },
+        {
+            "value": "abortionist",
+            "phony": false
+        },
+        {
+            "value": "multiculturalist",
+            "phony": false
+        },
+        {
+            "value": "pulling",
+            "phony": false
+        },
+        {
+            "value": "vomiting",
+            "phony": false
+        },
+        {
+            "value": "expansionism",
+            "phony": false
+        },
+        {
+            "value": "reversed",
+            "phony": false
+        },
+        {
+            "value": "pivoting",
+            "phony": false
+        },
+        {
+            "value": "angora",
+            "phony": false
+        },
+        {
+            "value": "triumvirate",
+            "phony": false
+        },
+        {
+            "value": "greeter",
+            "phony": false
+        },
+        {
+            "value": "beatnik",
+            "phony": false
+        },
+        {
+            "value": "blab",
+            "phony": false
+        },
+        {
+            "value": "repartee",
+            "phony": false
+        },
+        {
+            "value": "catch-all",
+            "phony": false
+        },
+        {
+            "value": "billows",
+            "phony": false
+        },
+        {
+            "value": "pictograph",
+            "phony": false
+        },
+        {
+            "value": "charitably",
+            "phony": false
+        },
+        {
+            "value": "fresh-baked",
+            "phony": false
+        },
+        {
+            "value": "crinkly",
+            "phony": false
+        },
+        {
+            "value": "bunion",
+            "phony": false
+        },
+        {
+            "value": "eight-year-old",
+            "phony": false
+        },
+        {
+            "value": "comradeship",
+            "phony": false
+        },
+        {
+            "value": "lovesick",
             "phony": false
         }
     ],
-    "dictionarySize": 20423,
-    "stepSize": 5000
+    "dictionarySize": 59066,
+    "stepSize": 4998
 }
