@@ -5,6 +5,10 @@
 ```
 make server
 ```
+или
+```
+node tools/server.js
+```
 
 После этого сайт доступен в браузере по адресу [http://localhost:8080/](http://localhost:8080/)
 
