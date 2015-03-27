@@ -68,14 +68,14 @@ wordsProvider = {
         this.STEP2_JSON = this.DATA_PATH + 'words2.json';
         this.STEP1 = {
             numWordsInBundle: 1,
-            bundleSize: 25,
+            bundleSize: 100,
             minBundle: 0,
-            maxBundle: 184,
+            maxBundle: 66,
             countPhony: 2
         };
         this.STEP2 = {
             minStep: 0,
-            maxStep: 12,
+            maxStep: 9,
             stepSize: 714,
             stepCount: 46,
             countPhony: 2
@@ -99,7 +99,7 @@ wordsProvider = {
                 index = this.random(bundleSize * bundleNum, bundleSize * (bundleNum + 1));
                 newWord = this.lemma[index];
 
-                if (newWord && words.indexOf(newWord) === -1  && this.ENABLED_TYPES.indexOf(newWord.type) !== -1
+                if (newWord && words.indexOf(newWord.value) === -1  && this.ENABLED_TYPES.indexOf(newWord.type) !== -1
                         // && prompt(newWord.value + '[y/n]') === 'y'
                 ) {
                     words.push(newWord.value);
@@ -277,7 +277,11 @@ wordsProvider = {
             var array = row.split('\t'),
                 type = types[array[2]] || array[2];
 
-            if (!row || this.ENABLED_TYPES.indexOf(type) === -1) return;
+            if (!row || this.ENABLED_TYPES.indexOf(type) === -1
+                || array[1].indexOf('-') !== -1
+                || /^[A-Z]/.test(array[1])) {
+                return;
+            }
 
             json[index] = {
                 value: array[1],

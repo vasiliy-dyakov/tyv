@@ -4,7 +4,7 @@
 
     var translations = {
         en: {
-            'Протестируй свой словарный запас': 'Test your russian vocabulary',
+            'Протестируй свой словарный запас': 'Test your vocabulary',
             'Сколько слов': 'How many',
             'русского': 'russians',
             'английского': 'english',

@@ -1,15 +1,7 @@
 {
     "0": [
         {
-            "value": "сопоставить",
-            "phony": false
-        },
-        {
-            "value": "стандакур",
-            "phony": true
-        },
-        {
-            "value": "советник",
+            "value": "образ",
             "phony": false
         },
         {
@@ -17,139 +9,31 @@
             "phony": true
         },
         {
-            "value": "спрятать",
+            "value": "сближение",
             "phony": false
         },
         {
-            "value": "чуткий",
+            "value": "распознать",
             "phony": false
         },
         {
-            "value": "документация",
+            "value": "балл",
             "phony": false
         },
         {
-            "value": "исказить",
+            "value": "регистрация",
             "phony": false
         },
         {
-            "value": "выставлять",
+            "value": "самосташка",
+            "phony": true
+        },
+        {
+            "value": "простой",
             "phony": false
         },
         {
-            "value": "обморок",
-            "phony": false
-        },
-        {
-            "value": "признание",
-            "phony": false
-        },
-        {
-            "value": "очнуться",
-            "phony": false
-        },
-        {
-            "value": "лозунг",
-            "phony": false
-        },
-        {
-            "value": "окончание",
-            "phony": false
-        },
-        {
-            "value": "величество",
-            "phony": false
-        },
-        {
-            "value": "арбитражный",
-            "phony": false
-        },
-        {
-            "value": "черный",
-            "phony": false
-        },
-        {
-            "value": "съемка",
-            "phony": false
-        },
-        {
-            "value": "смелость",
-            "phony": false
-        },
-        {
-            "value": "корреспондент",
-            "phony": false
-        },
-        {
-            "value": "впрямь",
-            "phony": false
-        },
-        {
-            "value": "обида",
-            "phony": false
-        },
-        {
-            "value": "сервис",
-            "phony": false
-        },
-        {
-            "value": "спуск",
-            "phony": false
-        },
-        {
-            "value": "перрон",
-            "phony": false
-        },
-        {
-            "value": "заразить",
-            "phony": false
-        },
-        {
-            "value": "название",
-            "phony": false
-        },
-        {
-            "value": "театральный",
-            "phony": false
-        },
-        {
-            "value": "предстать",
-            "phony": false
-        },
-        {
-            "value": "пень",
-            "phony": false
-        },
-        {
-            "value": "спеть",
-            "phony": false
-        },
-        {
-            "value": "отдельность",
-            "phony": false
-        },
-        {
-            "value": "уборщица",
-            "phony": false
-        },
-        {
-            "value": "гад",
-            "phony": false
-        },
-        {
-            "value": "путаться",
-            "phony": false
-        },
-        {
-            "value": "сентиментальный",
-            "phony": false
-        },
-        {
-            "value": "кандидат",
-            "phony": false
-        },
-        {
-            "value": "сильный",
+            "value": "непростой",
             "phony": false
         },
         {
@@ -157,509 +41,245 @@
             "phony": false
         },
         {
-            "value": "плакат",
+            "value": "аккуратный",
             "phony": false
         },
         {
-            "value": "здравоохранение",
+            "value": "траектория",
             "phony": false
         },
         {
-            "value": "наставник",
+            "value": "главное",
             "phony": false
         },
         {
-            "value": "чуть",
+            "value": "смотреть",
             "phony": false
         },
         {
-            "value": "мытье",
+            "value": "рамка",
             "phony": false
         },
         {
-            "value": "тест",
+            "value": "реплика",
             "phony": false
         },
         {
-            "value": "заморозить",
+            "value": "банка",
             "phony": false
         },
         {
-            "value": "фотографировать",
+            "value": "устать",
             "phony": false
         },
         {
-            "value": "бревно",
+            "value": "умысел",
             "phony": false
         },
         {
-            "value": "аппетит",
+            "value": "витрина",
             "phony": false
         },
         {
-            "value": "тяжкий",
+            "value": "прыгать",
+            "phony": false
+        },
+        {
+            "value": "видный",
+            "phony": false
+        },
+        {
+            "value": "попрощаться",
+            "phony": false
+        },
+        {
+            "value": "склонный",
+            "phony": false
+        },
+        {
+            "value": "репортаж",
+            "phony": false
+        },
+        {
+            "value": "мистер",
+            "phony": false
+        },
+        {
+            "value": "фигурный",
+            "phony": false
+        },
+        {
+            "value": "страдание",
+            "phony": false
+        },
+        {
+            "value": "навалиться",
+            "phony": false
+        },
+        {
+            "value": "полк",
+            "phony": false
+        },
+        {
+            "value": "сторонник",
+            "phony": false
+        },
+        {
+            "value": "кнопка",
+            "phony": false
+        },
+        {
+            "value": "дневной",
+            "phony": false
+        },
+        {
+            "value": "царский",
+            "phony": false
+        },
+        {
+            "value": "землетрясение",
+            "phony": false
+        },
+        {
+            "value": "оберегать",
+            "phony": false
+        },
+        {
+            "value": "араб",
+            "phony": false
+        },
+        {
+            "value": "черта",
+            "phony": false
+        },
+        {
+            "value": "учитываться",
+            "phony": false
+        },
+        {
+            "value": "резко",
+            "phony": false
+        },
+        {
+            "value": "воскресение",
+            "phony": false
+        },
+        {
+            "value": "поляна",
+            "phony": false
+        },
+        {
+            "value": "истолковать",
+            "phony": false
+        },
+        {
+            "value": "плавать",
+            "phony": false
+        },
+        {
+            "value": "строгость",
+            "phony": false
+        },
+        {
+            "value": "истребитель",
+            "phony": false
+        },
+        {
+            "value": "наклон",
+            "phony": false
+        },
+        {
+            "value": "менеджмент",
+            "phony": false
+        },
+        {
+            "value": "спуститься",
+            "phony": false
+        },
+        {
+            "value": "прогресс",
             "phony": false
         }
     ],
     "10000": [
         {
-            "value": "ввязаться",
+            "value": "остудить",
             "phony": false
         },
         {
-            "value": "беспрерывно",
+            "value": "кузница",
             "phony": false
         },
         {
-            "value": "беспечно",
+            "value": "соломка",
             "phony": false
         },
         {
-            "value": "блудный",
+            "value": "перенять",
             "phony": false
         },
         {
-            "value": "доисторический",
+            "value": "осиротеть",
             "phony": false
         },
         {
-            "value": "мартовский",
+            "value": "хлопотный",
             "phony": false
         },
         {
-            "value": "засовывать",
+            "value": "протокольный",
             "phony": false
         },
         {
-            "value": "присвоение",
+            "value": "дивиденд",
             "phony": false
         },
         {
-            "value": "пританцовывать",
+            "value": "оригинально",
             "phony": false
         },
         {
-            "value": "одеколон",
+            "value": "развозить",
             "phony": false
         },
         {
-            "value": "плавучий",
+            "value": "оборванный",
             "phony": false
         },
         {
-            "value": "двухместный",
+            "value": "тарифный",
             "phony": false
         },
         {
-            "value": "согласованный",
+            "value": "охраняться",
             "phony": false
         },
         {
-            "value": "рассеянно",
+            "value": "изюм",
             "phony": false
         },
         {
-            "value": "светофор",
-            "phony": false
-        },
-        {
-            "value": "невесомость",
-            "phony": false
-        },
-        {
-            "value": "нотка",
-            "phony": false
-        },
-        {
-            "value": "исполинский",
-            "phony": false
-        },
-        {
-            "value": "обстрел",
-            "phony": false
-        },
-        {
-            "value": "закружиться",
-            "phony": false
-        },
-        {
-            "value": "мобильник",
-            "phony": false
-        },
-        {
-            "value": "сыпать",
-            "phony": false
-        },
-        {
-            "value": "новорожденный",
-            "phony": false
-        },
-        {
-            "value": "олицетворять",
-            "phony": false
-        },
-        {
-            "value": "вьетнамский",
-            "phony": false
-        },
-        {
-            "value": "зимовать",
-            "phony": false
-        },
-        {
-            "value": "кудри",
-            "phony": false
-        },
-        {
-            "value": "разделаться",
-            "phony": false
-        },
-        {
-            "value": "ущемить",
-            "phony": false
-        },
-        {
-            "value": "аббревиатура",
-            "phony": false
-        },
-        {
-            "value": "нерабочий",
-            "phony": false
-        },
-        {
-            "value": "совместимый",
-            "phony": false
-        },
-        {
-            "value": "сквозить",
-            "phony": false
-        },
-        {
-            "value": "дышаться",
-            "phony": false
-        },
-        {
-            "value": "играться",
-            "phony": false
-        },
-        {
-            "value": "озаботиться",
-            "phony": false
-        },
-        {
-            "value": "целостный",
-            "phony": false
-        },
-        {
-            "value": "застопориться",
-            "phony": false
-        },
-        {
-            "value": "исподволь",
-            "phony": false
-        },
-        {
-            "value": "целиться",
-            "phony": false
-        },
-        {
-            "value": "заглушать",
-            "phony": false
-        },
-        {
-            "value": "старобит",
+            "value": "политакон",
             "phony": true
         },
         {
-            "value": "чех",
+            "value": "сопоставлять",
             "phony": false
         },
         {
-            "value": "соскальзывать",
+            "value": "бойкий",
             "phony": false
         },
         {
-            "value": "потухнуть",
+            "value": "шутя",
             "phony": false
         },
         {
-            "value": "алчный",
+            "value": "антиквариат",
             "phony": false
         },
         {
-            "value": "добромей",
-            "phony": true
-        },
-        {
-            "value": "адвокатский",
-            "phony": false
-        },
-        {
-            "value": "самоходный",
-            "phony": false
-        },
-        {
-            "value": "отлучить",
-            "phony": false
-        }
-    ],
-    "20000": [
-        {
-            "value": "лечащий",
-            "phony": false
-        },
-        {
-            "value": "моделировать",
-            "phony": false
-        },
-        {
-            "value": "дилерский",
-            "phony": false
-        },
-        {
-            "value": "ступа",
-            "phony": false
-        },
-        {
-            "value": "выдворить",
-            "phony": false
-        },
-        {
-            "value": "откушать",
-            "phony": false
-        },
-        {
-            "value": "вдохновляться",
-            "phony": false
-        },
-        {
-            "value": "стартан",
-            "phony": true
-        },
-        {
-            "value": "сопредседатель",
-            "phony": false
-        },
-        {
-            "value": "цыкнуть",
-            "phony": false
-        },
-        {
-            "value": "подчистую",
-            "phony": false
-        },
-        {
-            "value": "иммиграция",
-            "phony": false
-        },
-        {
-            "value": "социал-демократический",
-            "phony": false
-        },
-        {
-            "value": "оснащенность",
-            "phony": false
-        },
-        {
-            "value": "форпост",
-            "phony": false
-        },
-        {
-            "value": "сканер",
-            "phony": false
-        },
-        {
-            "value": "врубаться",
-            "phony": false
-        },
-        {
-            "value": "львовский",
-            "phony": false
-        },
-        {
-            "value": "потешить",
-            "phony": false
-        },
-        {
-            "value": "лобный",
-            "phony": false
-        },
-        {
-            "value": "ухать",
-            "phony": false
-        },
-        {
-            "value": "межрегиональный",
-            "phony": false
-        },
-        {
-            "value": "нюрнбергский",
-            "phony": false
-        },
-        {
-            "value": "утиль",
-            "phony": false
-        },
-        {
-            "value": "окаймить",
-            "phony": false
-        },
-        {
-            "value": "обчистить",
-            "phony": false
-        },
-        {
-            "value": "воспрять",
-            "phony": false
-        },
-        {
-            "value": "дельта",
-            "phony": false
-        },
-        {
-            "value": "информатор",
-            "phony": false
-        },
-        {
-            "value": "закашляться",
-            "phony": false
-        },
-        {
-            "value": "несоблюдение",
-            "phony": false
-        },
-        {
-            "value": "делание",
-            "phony": false
-        },
-        {
-            "value": "видеофильм",
-            "phony": false
-        },
-        {
-            "value": "чарка",
-            "phony": false
-        },
-        {
-            "value": "премировать",
-            "phony": false
-        },
-        {
-            "value": "перегнуть",
-            "phony": false
-        },
-        {
-            "value": "пунктуальный",
-            "phony": false
-        },
-        {
-            "value": "эластичность",
-            "phony": false
-        },
-        {
-            "value": "онкологический",
-            "phony": false
-        },
-        {
-            "value": "оливье",
-            "phony": false
-        },
-        {
-            "value": "веревочный",
-            "phony": false
-        },
-        {
-            "value": "никотин",
-            "phony": false
-        },
-        {
-            "value": "эксплуататор",
-            "phony": false
-        },
-        {
-            "value": "стандакур",
-            "phony": true
-        },
-        {
-            "value": "говорение",
-            "phony": false
-        },
-        {
-            "value": "злоключение",
-            "phony": false
-        },
-        {
-            "value": "выколоть",
-            "phony": false
-        },
-        {
-            "value": "наследование",
-            "phony": false
-        },
-        {
-            "value": "топнуть",
-            "phony": false
-        },
-        {
-            "value": "гаубица",
-            "phony": false
-        }
-    ],
-    "30000": [
-        {
-            "value": "зашлепать",
-            "phony": false
-        },
-        {
-            "value": "мебельщик",
-            "phony": false
-        },
-        {
-            "value": "фланговый",
-            "phony": false
-        },
-        {
-            "value": "бультерьер",
-            "phony": false
-        },
-        {
-            "value": "залопотать",
-            "phony": false
-        },
-        {
-            "value": "волоколамский",
-            "phony": false
-        },
-        {
-            "value": "инцест",
-            "phony": false
-        },
-        {
-            "value": "скромненький",
-            "phony": false
-        },
-        {
-            "value": "взболтать",
-            "phony": false
-        },
-        {
-            "value": "мясопродукт",
-            "phony": false
-        },
-        {
-            "value": "юрский",
-            "phony": false
-        },
-        {
-            "value": "явочный",
-            "phony": false
-        },
-        {
-            "value": "трафик",
-            "phony": false
-        },
-        {
-            "value": "похерить",
+            "value": "грант",
             "phony": false
         },
         {
@@ -667,229 +287,363 @@
             "phony": true
         },
         {
-            "value": "неуважительный",
+            "value": "неполноценный",
             "phony": false
         },
         {
-            "value": "недотрога",
+            "value": "обвязать",
             "phony": false
         },
         {
-            "value": "малодоступный",
+            "value": "предвкушать",
             "phony": false
         },
         {
-            "value": "проплешина",
+            "value": "осознанный",
             "phony": false
         },
         {
-            "value": "дознаватель",
+            "value": "назавтра",
             "phony": false
         },
         {
-            "value": "праведность",
+            "value": "карусель",
             "phony": false
         },
         {
-            "value": "расщедриться",
+            "value": "аргументация",
             "phony": false
         },
         {
-            "value": "проклятущий",
+            "value": "сода",
             "phony": false
         },
         {
-            "value": "отпаивать",
+            "value": "величать",
             "phony": false
         },
         {
-            "value": "аффилированный",
+            "value": "шило",
             "phony": false
         },
         {
-            "value": "носоглотка",
+            "value": "неудовлетворенный",
             "phony": false
         },
         {
-            "value": "наркоторговля",
+            "value": "неопределенно",
             "phony": false
         },
         {
-            "value": "выморочный",
+            "value": "повеселиться",
             "phony": false
         },
         {
-            "value": "триединство",
+            "value": "полсотни",
             "phony": false
         },
         {
-            "value": "глянцевитый",
+            "value": "поголовно",
             "phony": false
         },
         {
-            "value": "чресла",
+            "value": "сообразительность",
             "phony": false
         },
         {
-            "value": "преосвященство",
+            "value": "недостижимый",
             "phony": false
         },
         {
-            "value": "рагу",
+            "value": "запугивать",
             "phony": false
         },
         {
-            "value": "фриз",
+            "value": "близорукий",
             "phony": false
         },
         {
-            "value": "русско-еврейский",
+            "value": "маниакальный",
             "phony": false
         },
         {
-            "value": "косилка",
+            "value": "забираться",
             "phony": false
         },
         {
-            "value": "музицирование",
+            "value": "тусовка",
             "phony": false
         },
         {
-            "value": "протекторат",
+            "value": "определенность",
             "phony": false
         },
         {
-            "value": "объедать",
+            "value": "дельфин",
             "phony": false
         },
         {
-            "value": "гагапа",
-            "phony": true
-        },
-        {
-            "value": "непрестижный",
+            "value": "пиратский",
             "phony": false
         },
         {
-            "value": "лихолетье",
+            "value": "узнавание",
             "phony": false
         },
         {
-            "value": "ревизионный",
+            "value": "маститый",
             "phony": false
         },
         {
-            "value": "бороденка",
+            "value": "застучать",
             "phony": false
         },
         {
-            "value": "арифмометр",
-            "phony": false
-        },
-        {
-            "value": "распугивать",
-            "phony": false
-        },
-        {
-            "value": "прорисовать",
-            "phony": false
-        },
-        {
-            "value": "барный",
-            "phony": false
-        },
-        {
-            "value": "упырь",
-            "phony": false
-        },
-        {
-            "value": "сивуха",
+            "value": "столп",
             "phony": false
         }
     ],
-    "40000": [
+    "20000": [
         {
-            "value": "сеноманский",
+            "value": "сглаживать",
             "phony": false
         },
         {
-            "value": "закольцевать",
+            "value": "примадонна",
             "phony": false
         },
         {
-            "value": "ильюшинский",
+            "value": "переутомление",
             "phony": false
         },
         {
-            "value": "иммунобиологический",
+            "value": "пернатый",
             "phony": false
         },
         {
-            "value": "неопалимый",
+            "value": "поспешать",
             "phony": false
         },
         {
-            "value": "подруливать",
+            "value": "жалование",
             "phony": false
         },
         {
-            "value": "десталинизация",
+            "value": "перепонка",
             "phony": false
         },
         {
-            "value": "усреднение",
+            "value": "батальонный",
             "phony": false
         },
         {
-            "value": "перемышльский",
+            "value": "рейтузы",
             "phony": false
         },
         {
-            "value": "теленовость",
+            "value": "перевалиться",
             "phony": false
         },
         {
-            "value": "предметность",
+            "value": "сжирать",
             "phony": false
         },
         {
-            "value": "филон",
+            "value": "обождать",
             "phony": false
         },
         {
-            "value": "койот",
+            "value": "уменьшительный",
             "phony": false
         },
         {
-            "value": "манси",
+            "value": "посвистывать",
             "phony": false
         },
         {
-            "value": "планово-предупредительный",
+            "value": "отворачивать",
             "phony": false
         },
         {
-            "value": "релятивистский",
+            "value": "соответственный",
             "phony": false
         },
         {
-            "value": "трансгрессия",
+            "value": "ассимиляция",
             "phony": false
         },
         {
-            "value": "системность",
+            "value": "связной",
             "phony": false
         },
         {
-            "value": "инобытие",
+            "value": "прибраться",
             "phony": false
         },
         {
-            "value": "стартан",
+            "value": "аранжировка",
+            "phony": false
+        },
+        {
+            "value": "комплектование",
+            "phony": false
+        },
+        {
+            "value": "велосипедист",
+            "phony": false
+        },
+        {
+            "value": "лубок",
+            "phony": false
+        },
+        {
+            "value": "оттеснять",
+            "phony": false
+        },
+        {
+            "value": "иена",
+            "phony": false
+        },
+        {
+            "value": "прицепиться",
+            "phony": false
+        },
+        {
+            "value": "дублирование",
+            "phony": false
+        },
+        {
+            "value": "пошептаться",
+            "phony": false
+        },
+        {
+            "value": "понтеми",
             "phony": true
         },
         {
-            "value": "ультра",
+            "value": "образность",
+            "phony": false
+        },
+        {
+            "value": "одессит",
+            "phony": false
+        },
+        {
+            "value": "приставной",
+            "phony": false
+        },
+        {
+            "value": "бросовый",
+            "phony": false
+        },
+        {
+            "value": "депир",
+            "phony": true
+        },
+        {
+            "value": "непоправимо",
+            "phony": false
+        },
+        {
+            "value": "притулиться",
+            "phony": false
+        },
+        {
+            "value": "нелегкая",
+            "phony": false
+        },
+        {
+            "value": "запойный",
+            "phony": false
+        },
+        {
+            "value": "сладостно",
+            "phony": false
+        },
+        {
+            "value": "быстроходный",
+            "phony": false
+        },
+        {
+            "value": "орешник",
+            "phony": false
+        },
+        {
+            "value": "рассветный",
+            "phony": false
+        },
+        {
+            "value": "портсигар",
+            "phony": false
+        },
+        {
+            "value": "освящение",
+            "phony": false
+        },
+        {
+            "value": "детвора",
+            "phony": false
+        },
+        {
+            "value": "причинный",
+            "phony": false
+        },
+        {
+            "value": "амбарный",
+            "phony": false
+        },
+        {
+            "value": "попрекать",
+            "phony": false
+        },
+        {
+            "value": "фразеология",
+            "phony": false
+        },
+        {
+            "value": "втискиваться",
+            "phony": false
+        }
+    ],
+    "30000": [
+        {
+            "value": "негожий",
+            "phony": false
+        },
+        {
+            "value": "новехонький",
+            "phony": false
+        },
+        {
+            "value": "сиротка",
+            "phony": false
+        },
+        {
+            "value": "хавать",
+            "phony": false
+        },
+        {
+            "value": "напудрить",
+            "phony": false
+        },
+        {
+            "value": "просовываться",
+            "phony": false
+        },
+        {
+            "value": "птицеводство",
+            "phony": false
+        },
+        {
+            "value": "гардеробный",
+            "phony": false
+        },
+        {
+            "value": "слабона",
+            "phony": true
+        },
+        {
+            "value": "печорский",
             "phony": false
         },
         {
@@ -897,115 +651,361 @@
             "phony": true
         },
         {
-            "value": "разборчивость",
+            "value": "промерзать",
             "phony": false
         },
         {
-            "value": "поправочный",
+            "value": "обалденный",
             "phony": false
         },
         {
-            "value": "царек",
+            "value": "пасторальный",
             "phony": false
         },
         {
-            "value": "карикатурно",
+            "value": "конкурсант",
             "phony": false
         },
         {
-            "value": "кавалергард",
+            "value": "анамнез",
             "phony": false
         },
         {
-            "value": "влет",
+            "value": "мелкобуржуазный",
             "phony": false
         },
         {
-            "value": "извериться",
+            "value": "скуп",
             "phony": false
         },
         {
-            "value": "недропользователь",
+            "value": "фри",
             "phony": false
         },
         {
-            "value": "ностальгически",
+            "value": "вразброд",
             "phony": false
         },
         {
-            "value": "севильский",
+            "value": "антитеррор",
             "phony": false
         },
         {
-            "value": "бумажонка",
+            "value": "марокканец",
             "phony": false
         },
         {
-            "value": "завмаг",
+            "value": "лиловатый",
             "phony": false
         },
         {
-            "value": "большевицкий",
+            "value": "нестрашно",
             "phony": false
         },
         {
-            "value": "акушерский",
+            "value": "козлик",
             "phony": false
         },
         {
-            "value": "изученность",
+            "value": "почтеннейший",
             "phony": false
         },
         {
-            "value": "пластун",
+            "value": "милка",
             "phony": false
         },
         {
-            "value": "чубайсовский",
+            "value": "политкорректный",
             "phony": false
         },
         {
-            "value": "телеинтервью",
+            "value": "багет",
             "phony": false
         },
         {
-            "value": "туговато",
+            "value": "иконография",
             "phony": false
         },
         {
-            "value": "драже",
+            "value": "прыгун",
             "phony": false
         },
         {
-            "value": "мордовать",
+            "value": "провоз",
             "phony": false
         },
         {
-            "value": "сенсор",
+            "value": "осинка",
             "phony": false
         },
         {
-            "value": "писулька",
+            "value": "пария",
             "phony": false
         },
         {
-            "value": "концентр",
+            "value": "безотрадный",
             "phony": false
         },
         {
-            "value": "сандвич",
+            "value": "многоканальный",
             "phony": false
         },
         {
-            "value": "охмелеть",
+            "value": "общепитовский",
             "phony": false
         },
         {
-            "value": "телекомментатор",
+            "value": "эсэсовский",
             "phony": false
         },
         {
-            "value": "компоновать",
+            "value": "беженка",
+            "phony": false
+        },
+        {
+            "value": "гулькин",
+            "phony": false
+        },
+        {
+            "value": "конфузиться",
+            "phony": false
+        },
+        {
+            "value": "осиный",
+            "phony": false
+        },
+        {
+            "value": "изобретательство",
+            "phony": false
+        },
+        {
+            "value": "совестливость",
+            "phony": false
+        },
+        {
+            "value": "орденоносец",
+            "phony": false
+        },
+        {
+            "value": "норовистый",
+            "phony": false
+        },
+        {
+            "value": "гравировка",
+            "phony": false
+        },
+        {
+            "value": "копытце",
+            "phony": false
+        },
+        {
+            "value": "старослужащий",
+            "phony": false
+        },
+        {
+            "value": "благодарствовать",
+            "phony": false
+        }
+    ],
+    "40000": [
+        {
+            "value": "российско-грузинский",
+            "phony": false
+        },
+        {
+            "value": "нормандский",
+            "phony": false
+        },
+        {
+            "value": "национально-государственный",
+            "phony": false
+        },
+        {
+            "value": "землепроходец",
+            "phony": false
+        },
+        {
+            "value": "макнуть",
+            "phony": false
+        },
+        {
+            "value": "загорание",
+            "phony": false
+        },
+        {
+            "value": "удешевлять",
+            "phony": false
+        },
+        {
+            "value": "неоплатонизм",
+            "phony": false
+        },
+        {
+            "value": "попурри",
+            "phony": false
+        },
+        {
+            "value": "взводить",
+            "phony": false
+        },
+        {
+            "value": "одесную",
+            "phony": false
+        },
+        {
+            "value": "лиственничник",
+            "phony": false
+        },
+        {
+            "value": "несмешной",
+            "phony": false
+        },
+        {
+            "value": "ультраправый",
+            "phony": false
+        },
+        {
+            "value": "водоносный",
+            "phony": false
+        },
+        {
+            "value": "девелопер",
+            "phony": false
+        },
+        {
+            "value": "отклеить",
+            "phony": false
+        },
+        {
+            "value": "угор",
+            "phony": false
+        },
+        {
+            "value": "трансцендентность",
+            "phony": false
+        },
+        {
+            "value": "регулятивный",
+            "phony": false
+        },
+        {
+            "value": "компенсаторный",
+            "phony": false
+        },
+        {
+            "value": "пузан",
+            "phony": false
+        },
+        {
+            "value": "крокет",
+            "phony": false
+        },
+        {
+            "value": "скаутский",
+            "phony": false
+        },
+        {
+            "value": "надоить",
+            "phony": false
+        },
+        {
+            "value": "траст",
+            "phony": false
+        },
+        {
+            "value": "почвопокровный",
+            "phony": false
+        },
+        {
+            "value": "оцепенелый",
+            "phony": false
+        },
+        {
+            "value": "солидак",
+            "phony": true
+        },
+        {
+            "value": "геотермальный",
+            "phony": false
+        },
+        {
+            "value": "огосударствление",
+            "phony": false
+        },
+        {
+            "value": "ровнять",
+            "phony": false
+        },
+        {
+            "value": "шмыжка",
+            "phony": true
+        },
+        {
+            "value": "рванина",
+            "phony": false
+        },
+        {
+            "value": "диссоциация",
+            "phony": false
+        },
+        {
+            "value": "дивергенция",
+            "phony": false
+        },
+        {
+            "value": "монолитность",
+            "phony": false
+        },
+        {
+            "value": "лицеист",
+            "phony": false
+        },
+        {
+            "value": "морозовский",
+            "phony": false
+        },
+        {
+            "value": "шагреневый",
+            "phony": false
+        },
+        {
+            "value": "рысий",
+            "phony": false
+        },
+        {
+            "value": "впадинка",
+            "phony": false
+        },
+        {
+            "value": "марабу",
+            "phony": false
+        },
+        {
+            "value": "гликопротеин",
+            "phony": false
+        },
+        {
+            "value": "миссионерство",
+            "phony": false
+        },
+        {
+            "value": "микробный",
+            "phony": false
+        },
+        {
+            "value": "томограмма",
+            "phony": false
+        },
+        {
+            "value": "познаваемый",
+            "phony": false
+        },
+        {
+            "value": "эскимосский",
+            "phony": false
+        },
+        {
+            "value": "светолюбивый",
             "phony": false
         }
     ]
