@@ -1,4 +1,8 @@
-(function(app) {
+define([
+    'app',
+    'angular',
+    'i18n'
+], function(app) {
 
     'use strict';
 
@@ -31,4 +35,4 @@
         }
     ]);
 
-})(TYV);
+});

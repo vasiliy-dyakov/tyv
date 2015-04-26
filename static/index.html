@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="TYV" data-ng-controller="GlobalController">
+<html lang="en" data-ng-controller="GlobalController">
 <head>
     <meta charset="utf-8">
     <title data-ng-bind="i18n['Протестируй свой словарный запас']"></title>
@@ -13,19 +13,7 @@
         <ng-view></ng-view>
     </div>
 
-    <script src="libs/jquery/dist/jquery.js"></script>
-    <script src="libs/lodash/dist/lodash.js"></script>
-    <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="libs/angular/angular.js"></script>
-    <script src="libs/angular-route/angular-route.js"></script>
-    <script src="libs/angular-cookies/angular-cookies.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/GlobalController.js"></script>
-    <script src="js/LangChoosingController.js"></script>
-    <script src="js/StepsController.js"></script>
-    <script src="js/ResultController.js"></script>
-    <script src="js/storage.js"></script>
-    <script src="js/i18n.js"></script>
+    <script data-main="../../js/bootstrap.js" src="libs/requirejs/require.js"></script>
 
     <script type="text/ng-template" id="headerView">
         <div class="page-header" data-ng-controller="LangChoosingController">

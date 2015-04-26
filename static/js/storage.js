@@ -1,23 +1,29 @@
-TYV.factory('storage', function() {
+define(['app'], function(app) {
 
-    var _storage = {};
+    'use strict';
 
-    return {
-            set: function(name, value) {
-                _storage[name] = value;
-            },
+    app.factory('storage', function() {
 
-            get: function(name) {
-                return _storage[name];
-            },
+        var _storage = {};
 
-            remove: function(name) {
-                delete _storage[name];
-            },
+        return {
+                set: function(name, value) {
+                    _storage[name] = value;
+                },
 
-            clean: function() {
-                _storage = {};
-            }
-        };
+                get: function(name) {
+                    return _storage[name];
+                },
+
+                remove: function(name) {
+                    delete _storage[name];
+                },
+
+                clean: function() {
+                    _storage = {};
+                }
+            };
+
+    });
 
 });

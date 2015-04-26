@@ -1,4 +1,4 @@
-(function(app) {
+define(['app', 'storage', 'i18n', 'angular', 'angular-route'], function(app) {
 
     'use strict';
 
@@ -125,4 +125,4 @@
         StepsController
     ]);
 
-})(TYV);
+});

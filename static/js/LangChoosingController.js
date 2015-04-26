@@ -1,4 +1,4 @@
-(function(app) {
+define(['app', 'i18n'], function(app) {
 
     'use strict';
 
@@ -20,4 +20,4 @@
         }
     ]);
 
-})(TYV);
+});
