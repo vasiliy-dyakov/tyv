@@ -10,6 +10,6 @@
         'angular-cookies': '../libs/angular-cookies/angular-cookies'
     },
     include: 'requirejs',
-    name: 'bootstrap',
-    out: 'static/dist/bootstrap.js'
+    name: '../common',
+    out: 'static/dist/common.js'
 })

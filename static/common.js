@@ -15,7 +15,7 @@ require.config({
     }
 });
 
-define([
+require([
     'angular',
     'angular-route',
     'angular-cookies',
