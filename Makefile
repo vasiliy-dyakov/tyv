@@ -48,3 +48,4 @@ words: $(NPM_ROOT)
 .PHONY: dist
 dist: $(NPM_ROOT) $(LIBS)
 	node $(NPM_ROOT)/requirejs/bin/r.js -o build.js
+	node $(NPM_ROOT)/requirejs/bin/r.js -o cssIn=static/common.css out=static/dist/common.css

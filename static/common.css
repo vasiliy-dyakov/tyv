@@ -1,3 +1,6 @@
+@import url(libs/bootstrap/dist/css/bootstrap.min.css);
+@import url(libs/bootstrap/dist/css/bootstrap-theme.min.css);
+
 .lang-choosing {
     float: right;
     margin-left: 20px;
