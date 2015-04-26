@@ -45,3 +45,6 @@ words: $(NPM_ROOT)
 	node tools/wordsProvider.js ru
 	node tools/wordsProvider.js en
 
+.PHONY: dist
+dist: $(NPM_ROOT) $(LIBS)
+	node $(NPM_ROOT)/requirejs/bin/r.js -o build.js

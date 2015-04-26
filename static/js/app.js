@@ -1,19 +1,25 @@
-'use strict';
+define(['angular', 'angular-route', 'angular-cookies'], function() {
 
-var TYV = angular.module('TYV', ['ngRoute', 'ngCookies']);
+    'use strict';
 
-TYV.config(['$routeProvider', function($routeProvider) {
-    $routeProvider
-        .when('/step/:stepNum', {
-            templateUrl: 'stepsView',
-            controller: 'StepsController as controller'
-        })
-        .when('/result/', {
-            templateUrl: 'resultView',
-            controller: 'ResultController'
-        })
-        .otherwise({
-            redirectTo: '/step/1'
-        });
-    }
-]);
+    var app = angular.module('app', ['ngRoute', 'ngCookies']);
+
+    app.config(['$routeProvider', function($routeProvider) {
+        $routeProvider
+            .when('/step/:stepNum', {
+                templateUrl: 'stepsView',
+                controller: 'StepsController as controller'
+            })
+            .when('/result/', {
+                templateUrl: 'resultView',
+                controller: 'ResultController'
+            })
+            .otherwise({
+                redirectTo: '/step/1'
+            });
+        }
+    ]);
+
+    return app;
+
+});
