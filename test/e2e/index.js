@@ -7,7 +7,7 @@ describe('index page', function() {
 
         it('should something', function() {
             var wordsList = element.all(by.repeater('word in words'));
-            expect(wordsList.count()).toBe(20);
+            expect(wordsList.count()).toBe(50);
         });
     });
 

@@ -21,10 +21,10 @@ lint: $(NPM_ROOT)
 	@$(NPM_BIN)/jscs .
 
 .PHONY: test
-test: test-client test-e2e
+test: test-unit test-e2e
 
-.PHONY: test-client
-test-client: $(NPM_ROOT)
+.PHONY: test-unit
+test-unit: $(NPM_ROOT)
 	@$(NPM_ROOT)/karma/bin/karma start test/karma.conf.js
 
 .PHONY: test-e2e
