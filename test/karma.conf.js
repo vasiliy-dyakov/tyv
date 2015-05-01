@@ -4,12 +4,12 @@ module.exports = function(config){
     basePath : '../',
 
     files : [
-      'static/libs/angular/angular.js',
-      'static/libs/angular-route/angular-route.js',
-      'static/libs/angular-mocks/angular-mocks.js',
-      'static/js/app.js',
-      'static/js/**/*.js',
-      'test/unit/**/*.js'
+        'static/libs/angular/angular.js',
+        'static/libs/angular-route/angular-route.js',
+        'static/libs/angular-mocks/angular-mocks.js',
+        'static/js/app.js',
+        'static/js/**/*.js',
+        'test/unit/**/*.js'
     ],
 
     autoWatch : true,
@@ -19,13 +19,13 @@ module.exports = function(config){
     browsers : ['Chrome'],
 
     plugins : [
-            'karma-chrome-launcher',
-            'karma-jasmine'
-            ],
+        'karma-chrome-launcher',
+        'karma-jasmine'
+    ],
 
     junitReporter : {
-      outputFile: 'test_out/unit.xml',
-      suite: 'unit'
+        outputFile: 'test_out/unit.xml',
+        suite: 'unit'
     }
 
   });
