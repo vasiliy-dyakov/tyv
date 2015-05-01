@@ -8,75 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <ng-include src="'headerView'"></ng-include>
+        <ng-include src="'partials/header.html'"></ng-include>
         <ng-view></ng-view>
     </div>
 
     <!-- <script src="dist/common.js"></script> -->
     <script data-main="../../common.js" src="libs/requirejs/require.js"></script>
-
-    <script type="text/ng-template" id="headerView">
-        <div class="page-header" data-ng-controller="LangChoosingController">
-            <div class="lang-choosing">
-                <label class="radio-inline">
-                    <input type="radio" data-ng-model="lang" value="en">In English
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" data-ng-model="lang" value="ru">По-русски
-                </label>
-            </div>
-            <div class="words-lang-choosing">
-                {{ i18n['Словарь'] }}:
-                <select data-ng-model="wordsLang">
-                    <option value="ru">{{ i18n['русский'] }}</option>
-                    <option value="en">{{ i18n['английский'] }}</option>
-                </select>
-            </div>
-            <h1>{{ i18n['Протестируй свой словарный запас'] }}<br>
-                <small class="{{ wordsLang }}">
-                    {{ i18n['Сколько слов'] }}
-                    <span class="words-lang-ru">
-                        {{ i18n['русского'] }}
-                    </span>
-                    <span class="words-lang-en">
-                        {{ i18n['английского'] }}
-                    </span>
-                    {{ i18n['языка ты знаешь?'] }}</small></h1>
-        </div>
-    </script>
-
-    <script type="text/ng-template" id="stepsView">
-        <div class="callout callout-primery">
-            <p>{{ i18n['Укажи те слова, у которых знаешь хотя бы одно значение.'] }}
-            {{ i18n['Не указывай слова, которые встречал, но в значении сомневаешься.'] }}</p>
-        </div>
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#">{{ i18n['Шаг'] }} {{ step }} {{ i18n['из'] }} {{ stepsCount }}</a></li>
-        </ul>
-        <ul class="list-unstyled words">
-            <li class="word" data-ng-repeat="word in words">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" data-ng-model="word.checked">{{ word.value }}
-                    </label>
-                </div>
-            </li>
-        </ul>
-        <p>
-            <a data-ng-click="controller.calcStep()" class="btn btn-primary">
-                <span data-ng-show="nextStep">{{ i18n['Далее'] }}</span>
-                <span data-ng-show="!nextStep">{{ i18n['Узнать результат'] }}</span>
-            </a>
-        </p>
-    </script>
-
-    <script type="text/ng-template" id="resultView">
-        <div data-ng-show="knownWords">
-            <p data-ng-show="!isCheating">{{ i18n['Твой результат'] }}: {{ knownWords }} {{ i18n['слов'] }}</p>
-            <p data-ng-show="isCheating">{{ i18n['Были отмечены слова, которые в действительности не существуют!'] }}
-                {{ i18n['Попробуй пройти тест еще раз'] }}</p>
-        </div>
-        <p><a href="#/">{{ i18n['Пройти тест'] }}</a></p>
-    </script>
 </body>
 </html>

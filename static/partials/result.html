@@ -1,0 +1,6 @@
+<div data-ng-show="knownWords">
+    <p data-ng-show="!isCheating">{{ i18n['Твой результат'] }}: {{ knownWords }} {{ i18n['слов'] }}</p>
+    <p data-ng-show="isCheating">{{ i18n['Были отмечены слова, которые в действительности не существуют!'] }}
+        {{ i18n['Попробуй пройти тест еще раз'] }}</p>
+</div>
+<p><a href="#/">{{ i18n['Пройти тест'] }}</a></p>

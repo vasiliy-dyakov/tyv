@@ -1,0 +1,22 @@
+<div class="callout callout-primery">
+    <p>{{ i18n['Укажи те слова, у которых знаешь хотя бы одно значение.'] }}
+    {{ i18n['Не указывай слова, которые встречал, но в значении сомневаешься.'] }}</p>
+</div>
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#">{{ i18n['Шаг'] }} {{ step }} {{ i18n['из'] }} {{ stepsCount }}</a></li>
+</ul>
+<ul class="list-unstyled words">
+    <li class="word" data-ng-repeat="word in words">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" data-ng-model="word.checked">{{ word.value }}
+            </label>
+        </div>
+    </li>
+</ul>
+<p>
+    <a data-ng-click="controller.calcStep()" class="btn btn-primary">
+        <span data-ng-show="nextStep">{{ i18n['Далее'] }}</span>
+        <span data-ng-show="!nextStep">{{ i18n['Узнать результат'] }}</span>
+    </a>
+</p>

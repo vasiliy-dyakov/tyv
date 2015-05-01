@@ -7,11 +7,11 @@ define(['angular', 'angular-route', 'angular-cookies'], function() {
     app.config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/step/:stepNum', {
-                templateUrl: 'stepsView',
+                templateUrl: 'partials/steps.html',
                 controller: 'StepsController as controller'
             })
             .when('/result/', {
-                templateUrl: 'resultView',
+                templateUrl: 'partials/result.html',
                 controller: 'ResultController'
             })
             .otherwise({
