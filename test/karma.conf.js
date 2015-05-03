@@ -4,6 +4,7 @@ module.exports = function(config){
     basePath : '../',
 
     files : [
+        'static/common.js',
         'test/common.js',
         { included: false, pattern: 'test/unit/**/*.js' },
         { included: false, pattern: 'static/**/*.js' }

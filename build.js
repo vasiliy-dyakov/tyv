@@ -1,13 +1,8 @@
 ({
+    mainConfigFile: 'static/common.js',
     baseUrl: 'static/js',
     paths: {
-        jquery: '../libs/jquery/dist/jquery',
-        lodash: '../libs/lodash/dist/lodash',
-        'twitter-bootstrap': '../libs/bootstrap/dist/js/bootstrap',
-        angular: '../libs/angular/angular',
-        requirejs: '../libs/requirejs/require',
-        'angular-route': '../libs/angular-route/angular-route',
-        'angular-cookies': '../libs/angular-cookies/angular-cookies'
+        requirejs: '../libs/requirejs/require'
     },
     include: 'requirejs',
     name: '../common',
