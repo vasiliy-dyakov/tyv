@@ -1,8 +1,4 @@
-define([
-    'app',
-    'angular',
-    'i18n'
-], function(app) {
+define(['app', 'i18n'], function(app) {
 
     'use strict';
 

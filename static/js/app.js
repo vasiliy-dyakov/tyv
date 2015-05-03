@@ -1,4 +1,4 @@
-define(['angular', 'angular-route', 'angular-cookies'], function() {
+define(['angular', 'angular-route', 'angular-cookies'], function(angular) {
 
     'use strict';
 

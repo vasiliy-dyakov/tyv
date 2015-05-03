@@ -1,4 +1,4 @@
-define(['app', 'storage', 'i18n', 'angular', 'angular-route'], function(app) {
+define(['app', 'lodash', 'storage', 'i18n'], function(app, _) {
 
     'use strict';
 
@@ -24,7 +24,7 @@ define(['app', 'storage', 'i18n', 'angular', 'angular-route'], function(app) {
         i18n.add(translations);
 
         $scope.stepsCount = 2;
-        $scope.step = +$routeParams.stepNum;
+        $scope.step = typeof $routeParams.stepNum !== 'undefined' ? +$routeParams.stepNum : 1;
         $scope.nextStep = $scope.step < $scope.stepsCount ? $scope.step + 1 : false;
 
         if ($scope.step > 1 && typeof storage.get('currentResultRounded') === 'undefined') {

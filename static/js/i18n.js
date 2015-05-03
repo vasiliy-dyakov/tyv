@@ -1,4 +1,4 @@
-define(['app', 'angular', 'angular-cookies'], function(app) {
+define(['app', 'lodash'], function(app, _) {
 
     'use strict';
 
