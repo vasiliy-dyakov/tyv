@@ -7,7 +7,8 @@ module.exports = function(config){
         'static/common.js',
         'test/common.js',
         { included: false, pattern: 'test/unit/**/*.js' },
-        { included: false, pattern: 'static/**/*.js' }
+        { included: false, pattern: 'static/js/**/*.js' },
+        { included: false, pattern: 'static/libs/**/*.js' }
     ],
 
     autoWatch : true,
